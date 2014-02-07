@@ -1,0 +1,12 @@
+<resources>
+
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light"></style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme"></style>
+
+    <style name="AppTheme.NoTitleBar" parent="AppBaseTheme">
+        <item name="windowActionBar">false</item>
+    </style>
+
+</resources>

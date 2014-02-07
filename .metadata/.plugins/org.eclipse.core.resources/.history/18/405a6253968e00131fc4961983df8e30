@@ -1,0 +1,5 @@
+package com.foursee.funscounter.service;
+
+public class EventUpdateServiceRunner {
+
+}

@@ -1,0 +1,148 @@
+package com.foursee.funscounter.ui.view;
+
+import android.annotation.TargetApi;
+import android.content.Context;
+import android.os.Build;
+import android.util.AttributeSet;
+import android.view.LayoutInflater;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+import butterknife.OnClick;
+
+import com.foursee.funscounter.R;
+import com.foursee.funscounter.model.Event;
+import com.foursee.funscounter.model.Event.OnEventChangeListener;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+
+public class StadiumView extends LinearLayout implements OnEventChangeListener {
+
+	@InjectView(R.id.teams)
+	TextView teams;
+	@InjectView(R.id.date)
+	TextView date;
+	@InjectView(R.id.stand)
+	TextView stand;
+	@InjectView(R.id.funs)
+	TextView funs;
+
+	private final SimpleDateFormat dateFormater = new SimpleDateFormat("HH:mm\tdd.MM.yyyy");
+	private Event event;
+	private LayoutInflater inflater;
+	private Stand currentStand = Stand.Stadium;
+
+	public StadiumView(Context context) {
+		super(context);
+		init(context);
+	}
+
+	public StadiumView(Context context, AttributeSet attrs) {
+		super(context, attrs);
+		init(context);
+	}
+
+	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
+	public StadiumView(Context context, AttributeSet attrs, int defStyle) {
+		super(context, attrs, defStyle);
+		init(context);
+	}
+
+	private void init(Context context) {
+		setOrientation(LinearLayout.VERTICAL);
+		inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		inflater.inflate(R.layout.stadium_view, this, true);
+		ButterKnife.inject(this, this);
+	}
+
+	public void setModel(Event event) {
+		this.event = event;
+		event.registerListener(this);
+	}
+
+	@Override
+	public void onEventChange(ArrayList<String> chageGates) {
+		teams.setText(event.getDescription());
+		date.setText(dateFormater.format(event.getDate()));
+		fillWithData(currentStand);
+		highlightStand(chageGates);
+	}
+
+	@OnClick(R.id.pitch)
+	void onPitchClick() {
+		fillWithData(Stand.Stadium);
+	}
+
+	@OnClick(R.id.north_stand)
+	void onNorthStandClick() {
+		fillWithData(Stand.NorthStand);
+	}
+
+	@OnClick(R.id.east_stand)
+	void onEastStandClick() {
+		fillWithData(Stand.EastStand);
+	}
+
+	@OnClick(R.id.south_stand)
+	void onSouthStandClick() {
+		fillWithData(Stand.SouthStand);
+	}
+
+	@OnClick(R.id.away_stand)
+	void onAwayStandClick() {
+		fillWithData(Stand.AwayStand);
+	}
+
+	@OnClick(R.id.west_stand)
+	void onWestStandClick() {
+		fillWithData(Stand.WestStand);
+	}
+
+	private void fillWithData(Stand standToFill) {
+		currentStand = standToFill;
+		if (event != null) {
+			stand.setText(standToFill.name);
+			String amountString;
+			if (standToFill == Stand.Stadium) {
+				amountString = event.operations.getAmount() + " / " + event.operations.getCapacity();
+			} else {
+				amountString = event.operations.getAmount(standToFill.name) + " / " + event.operations.getCapacity(standToFill.name);
+			}
+			funs.setText(amountString);
+		}
+	}
+
+	private void highlightStand(ArrayList<String> chageGates) {
+		for (String standName : chageGates) {
+			switch (standName) {
+			case "North Stand":
+				break;
+			case "East Stand":
+				break;
+			case "South Stand":
+				break;
+			case "Away Stand":
+				break;
+			case "West Stand":
+				break;
+			}
+		}
+	}
+
+	private enum Stand {
+		Stadium("Stadium"), //
+		NorthStand("North Stand"), //
+		EastStand("East Stand"), //
+		SouthStand("South Stand"), //
+		AwayStand("Away Stand"), //
+		WestStand("West Stand");
+
+		public final String name;
+
+		private Stand(String name) {
+			this.name = name;
+		}
+	}
+}

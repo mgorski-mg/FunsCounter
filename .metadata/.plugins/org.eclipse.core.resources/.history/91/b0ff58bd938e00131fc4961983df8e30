@@ -1,0 +1,70 @@
+package com.foursee.funscounter;
+
+import android.app.Service;
+import android.content.Intent;
+import android.os.IBinder;
+import android.util.Log;
+
+import com.foursee.funscounter.model.Auth;
+import com.foursee.funscounter.network.rest.NetworkService;
+import com.octo.android.robospice.SpiceManager;
+
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class EventUpdateService extends Service {
+
+	private final SpiceManager spiceManager = new SpiceManager(NetworkService.class);
+	private Auth auth;
+
+	private Timer timer;
+
+	@Override
+	public void onCreate() {
+		Log.d("event_Service", "onCreate");
+		super.onCreate();
+		spiceManager.start(this);
+		auth = ((BaseApplication) getApplication()).getAuth();
+	}
+
+	@Override
+	public int onStartCommand(Intent intent, int flags, int startId) {
+		stopTimer();
+
+		timer = new Timer();
+		int interval = 5000;
+		timer.scheduleAtFixedRate(new TimerTask() {
+
+			@Override
+			public void run() {
+				Log.d("event_Service", "fire");
+				updateEvent();
+			}
+		}, 0, interval);
+
+		return Service.START_STICKY;
+	}
+
+	@Override
+	public IBinder onBind(Intent intent) {
+		return null;
+	}
+
+	private void updateEvent() {
+		// service
+	}
+
+	private void stopTimer() {
+		if (timer != null) {
+			timer.cancel();
+			timer = null;
+		}
+	}
+
+	@Override
+	public void onDestroy() {
+		spiceManager.shouldStop();
+		stopTimer();
+		super.onDestroy();
+	}
+}

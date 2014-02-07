@@ -1,0 +1,68 @@
+package com.foursee.funscounter.model.operation;
+
+import com.foursee.funscounter.model.Event;
+import com.foursee.funscounter.model.Gate;
+
+import java.util.ArrayList;
+
+public class EventOperations {
+	private final Event event;
+
+	public EventOperations(Event event) {
+		this.event = event;
+	}
+
+	public int getCapacity() {
+		Gate.List gates = event.getGates();
+
+		int capacity = 0;
+		for (Gate gate : gates) {
+			capacity += gate.getCapacity();
+		}
+		return capacity;
+	}
+
+	public int getCapacity(String gateName) {
+		Gate gate = findGateByName(gateName);
+
+		return gate.getCapacity();
+	}
+
+	public int getAmount() {
+		Gate.List gates = event.getGates();
+
+		int amount = 0;
+		for (Gate gate : gates) {
+			amount += gate.getAmount();
+		}
+		return amount;
+	}
+
+	public int getAmount(String gateName) {
+		Gate gate = findGateByName(gateName);
+
+		return gate.getAmount();
+	}
+
+	public ArrayList<String> compareGates(Gate.List newGates) {
+		Gate.List gates = event.getGates();
+		ArrayList<String> changeGates = new ArrayList<String>();
+
+		for (int i = 0; i<gates.size();i++) {
+			
+		}
+		return changeGates;
+	}
+
+	private Gate findGateByName(String gateName) {
+		Gate.List gates = event.getGates();
+
+		for (Gate gate : gates) {
+			if (gate.getDescription().equals(gateName)) {
+				return gate;
+			}
+		}
+
+		return new Gate();
+	}
+}

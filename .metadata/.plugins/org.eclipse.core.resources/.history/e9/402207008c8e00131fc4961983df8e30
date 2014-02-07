@@ -1,0 +1,8 @@
+package com.foursee.funscounter.ui.dialog;
+
+public class LoadingDialog {
+	
+	public void show() {
+		
+	}
+}

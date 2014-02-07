@@ -1,0 +1,8 @@
+anteditor.filterProperties=true
+anteditor.filterTopLevel=true
+anteditor.sort=true
+eclipse.preferences.version=1
+errorDialog=always
+outline.linkWithEditor=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

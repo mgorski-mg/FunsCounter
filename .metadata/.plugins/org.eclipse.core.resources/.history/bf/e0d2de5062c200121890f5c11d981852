@@ -1,0 +1,34 @@
+package com.ForSee.example.utils;
+
+import com.google.android.maps.GeoPoint;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CoordinatesUtils { 
+	public static String parseToString(List<GeoPoint> routePoints) {
+		StringBuilder sb = new StringBuilder();
+
+		int size = routePoints.size();
+		for (int i = 0; i < size; ++i) {
+			sb.append(routePoints.get(i).getLatitudeE6() + StringUtils.SPACE_STRING + routePoints.get(i).getLongitudeE6());
+			sb.append(StringUtils.SEPARATOR_STRING);
+		}
+
+		return sb.toString();
+	}
+
+	public static List<GeoPoint> parseFromString(String coordinateString) {
+		List<GeoPoint> routePoints = new ArrayList<GeoPoint>();
+
+		String[] coords = coordinateString.split(StringUtils.SEPARATOR_STRING);
+
+		int size = coords.length;
+		for (int i = 0; i < size; ++i) {
+			String[] coord = coords[i].split(StringUtils.SPACE_STRING);
+			routePoints.add(new GeoPoint(Integer.parseInt(coord[0]), Integer.parseInt(coord[1])));
+		}
+
+		return routePoints;
+	}
+}

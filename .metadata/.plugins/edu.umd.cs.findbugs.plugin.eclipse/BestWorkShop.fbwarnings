@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2" sequence="1" timestamp="1373725206067" analysisTimestamp="1373725204902" release="">
+  <Project projectName="BestWorkShop">
+    <Jar>D:\dev\Android\Workshops\best_android\BestWorkShop\bin\classes</Jar>
+    <AuxClasspathEntry>D:\dev\Android\Workshops\best_android\BestWorkShop\bin\classes</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Zlatan\Desktop\AndroidEclipse\sdk\platforms\android-17\android.jar</AuxClasspathEntry>
+    <SrcDir>D:\dev\Android\Workshops\best_android\BestWorkShop\gen</SrcDir>
+    <SrcDir>D:\dev\Android\Workshops\best_android\BestWorkShop\src</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" abbrev="SF" category="STYLE" first="1">
+    <Class classname="fp.pl.bestworkshop.MainActivity">
+      <SourceLine classname="fp.pl.bestworkshop.MainActivity" sourcefile="MainActivity.java" sourcepath="fp/pl/bestworkshop/MainActivity.java"/>
+    </Class>
+    <Method classname="fp.pl.bestworkshop.MainActivity" name="onMenuItemSelected" signature="(ILandroid/view/MenuItem;)Z" isStatic="false">
+      <SourceLine classname="fp.pl.bestworkshop.MainActivity" start="98" end="103" startBytecode="0" endBytecode="137" sourcefile="MainActivity.java" sourcepath="fp/pl/bestworkshop/MainActivity.java"/>
+    </Method>
+    <SourceLine classname="fp.pl.bestworkshop.MainActivity" start="98" end="100" startBytecode="6" endBytecode="50" sourcefile="MainActivity.java" sourcepath="fp/pl/bestworkshop/MainActivity.java"/>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="fp.pl.bestworkshop.R$attr">
+      <SourceLine classname="fp.pl.bestworkshop.R$attr" start="11" end="11" sourcefile="R.java" sourcepath="fp/pl/bestworkshop/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="fp.pl.bestworkshop.R$drawable">
+      <SourceLine classname="fp.pl.bestworkshop.R$drawable" start="13" end="13" sourcefile="R.java" sourcepath="fp/pl/bestworkshop/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="fp.pl.bestworkshop.R$id">
+      <SourceLine classname="fp.pl.bestworkshop.R$id" start="19" end="19" sourcefile="R.java" sourcepath="fp/pl/bestworkshop/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="fp.pl.bestworkshop.R$layout">
+      <SourceLine classname="fp.pl.bestworkshop.R$layout" start="28" end="28" sourcefile="R.java" sourcepath="fp/pl/bestworkshop/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="fp.pl.bestworkshop.R$menu">
+      <SourceLine classname="fp.pl.bestworkshop.R$menu" start="31" end="31" sourcefile="R.java" sourcepath="fp/pl/bestworkshop/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="fp.pl.bestworkshop.R$string">
+      <SourceLine classname="fp.pl.bestworkshop.R$string" start="34" end="34" sourcefile="R.java" sourcepath="fp/pl/bestworkshop/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="fp.pl.bestworkshop.R$style">
+      <SourceLine classname="fp.pl.bestworkshop.R$style" start="47" end="47" sourcefile="R.java" sourcepath="fp/pl/bestworkshop/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" abbrev="SIC" category="PERFORMANCE" first="1">
+    <Class classname="fp.pl.bestworkshop.RateChangeDialog$NullOnClickListener">
+      <SourceLine classname="fp.pl.bestworkshop.RateChangeDialog$NullOnClickListener" start="91" end="94" sourcefile="RateChangeDialog.java" sourcepath="fp/pl/bestworkshop/RateChangeDialog.java"/>
+    </Class>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Sat, 13 Jul 2013 16:18:57 +0200" total_classes="27" referenced_classes="163" total_bugs="9" total_size="390" num_packages="6" vm_version="23.25-b01" cpu_seconds="1.14" clock_seconds="1.17" peak_mbytes="358.18" alloc_mbytes="742.44" gc_seconds="0.06" priority_2="9">
+    <PackageStats package="fp.pl.bestworkshop" total_bugs="9" total_types="17" total_size="212" priority_2="9">
+      <ClassStats class="fp.pl.bestworkshop.BuildConfig" sourceFile="BuildConfig.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="fp.pl.bestworkshop.MainActivity" sourceFile="MainActivity.java" interface="false" size="55" bugs="1" priority_2="1"/>
+      <ClassStats class="fp.pl.bestworkshop.MainActivity$1" sourceFile="MainActivity.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="fp.pl.bestworkshop.MainActivity$2" sourceFile="MainActivity.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="fp.pl.bestworkshop.MainActivity$3" sourceFile="MainActivity.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="fp.pl.bestworkshop.R" sourceFile="R.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="fp.pl.bestworkshop.R$attr" sourceFile="R.java" interface="false" size="3" bugs="1" priority_2="1"/>
+      <ClassStats class="fp.pl.bestworkshop.R$drawable" sourceFile="R.java" interface="false" size="7" bugs="1" priority_2="1"/>
+      <ClassStats class="fp.pl.bestworkshop.R$id" sourceFile="R.java" interface="false" size="10" bugs="1" priority_2="1"/>
+      <ClassStats class="fp.pl.bestworkshop.R$layout" sourceFile="R.java" interface="false" size="4" bugs="1" priority_2="1"/>
+      <ClassStats class="fp.pl.bestworkshop.R$menu" sourceFile="R.java" interface="false" size="4" bugs="1" priority_2="1"/>
+      <ClassStats class="fp.pl.bestworkshop.R$string" sourceFile="R.java" interface="false" size="14" bugs="1" priority_2="1"/>
+      <ClassStats class="fp.pl.bestworkshop.R$style" sourceFile="R.java" interface="false" size="5" bugs="1" priority_2="1"/>
+      <ClassStats class="fp.pl.bestworkshop.RateChangeDialog" sourceFile="RateChangeDialog.java" interface="false" size="51" bugs="0"/>
+      <ClassStats class="fp.pl.bestworkshop.RateChangeDialog$EmptyInputValidator" sourceFile="RateChangeDialog.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="fp.pl.bestworkshop.RateChangeDialog$NullOnClickListener" sourceFile="RateChangeDialog.java" interface="false" size="7" bugs="1" priority_2="1"/>
+      <ClassStats class="fp.pl.bestworkshop.RateChangeDialog$PositiveOnClickListener" sourceFile="RateChangeDialog.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="fp.pl.bestworkshop.calculator" total_bugs="0" total_types="1" total_size="32">
+      <ClassStats class="fp.pl.bestworkshop.calculator.RateCalculator" sourceFile="RateCalculator.java" interface="false" size="32" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="fp.pl.bestworkshop.loaders" total_bugs="0" total_types="1" total_size="44">
+      <ClassStats class="fp.pl.bestworkshop.loaders.ExchangeRateLoader" sourceFile="ExchangeRateLoader.java" interface="false" size="44" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="fp.pl.bestworkshop.model" total_bugs="0" total_types="1" total_size="18">
+      <ClassStats class="fp.pl.bestworkshop.model.ExchangeRate" sourceFile="ExchangeRate.java" interface="false" size="18" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="fp.pl.bestworkshop.util" total_bugs="0" total_types="3" total_size="20">
+      <ClassStats class="fp.pl.bestworkshop.util.Constances" sourceFile="Constances.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="fp.pl.bestworkshop.util.SharedPreferencesSupporter" sourceFile="SharedPreferencesSupporter.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="fp.pl.bestworkshop.util.StringUtils" sourceFile="StringUtils.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="fp.pl.bestworkshop.xml" total_bugs="0" total_types="4" total_size="64">
+      <ClassStats class="fp.pl.bestworkshop.xml.ExchangeRateXmlHandler" sourceFile="ExchangeRateXmlHandler.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="fp.pl.bestworkshop.xml.IXmlHandler" sourceFile="IXmlHandler.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="fp.pl.bestworkshop.xml.XMLDownloader" sourceFile="XMLDownloader.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="fp.pl.bestworkshop.xml.XMLParser" sourceFile="XMLParser.java" interface="false" size="23" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="386" invocations="511" avgMicrosecondsPerInvocation="756" maxMicrosecondsPerInvocation="1476" standardDeviationMircosecondsPerInvocation="168"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="161" invocations="2" avgMicrosecondsPerInvocation="80834" maxMicrosecondsPerInvocation="135896" standardDeviationMircosecondsPerInvocation="55062"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="86" invocations="494" avgMicrosecondsPerInvocation="175" maxMicrosecondsPerInvocation="3776" standardDeviationMircosecondsPerInvocation="301"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindHEmismatch" totalMilliseconds="59" invocations="27" avgMicrosecondsPerInvocation="2218" maxMicrosecondsPerInvocation="57169" standardDeviationMircosecondsPerInvocation="10777"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="30" invocations="163" avgMicrosecondsPerInvocation="186" maxMicrosecondsPerInvocation="2582" standardDeviationMircosecondsPerInvocation="398"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="21" invocations="163" avgMicrosecondsPerInvocation="134" maxMicrosecondsPerInvocation="4018" standardDeviationMircosecondsPerInvocation="384"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="20" invocations="209" avgMicrosecondsPerInvocation="99" maxMicrosecondsPerInvocation="1823" standardDeviationMircosecondsPerInvocation="173"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="18" invocations="163" avgMicrosecondsPerInvocation="111" maxMicrosecondsPerInvocation="3730" standardDeviationMircosecondsPerInvocation="354"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="17" invocations="163" avgMicrosecondsPerInvocation="107" maxMicrosecondsPerInvocation="3360" standardDeviationMircosecondsPerInvocation="333"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="17" invocations="77" avgMicrosecondsPerInvocation="224" maxMicrosecondsPerInvocation="901" standardDeviationMircosecondsPerInvocation="206"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="16" invocations="79" avgMicrosecondsPerInvocation="210" maxMicrosecondsPerInvocation="1253" standardDeviationMircosecondsPerInvocation="208"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="16" invocations="79" avgMicrosecondsPerInvocation="203" maxMicrosecondsPerInvocation="1486" standardDeviationMircosecondsPerInvocation="214"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="14" invocations="81" avgMicrosecondsPerInvocation="176" maxMicrosecondsPerInvocation="977" standardDeviationMircosecondsPerInvocation="180"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1373725206066" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>

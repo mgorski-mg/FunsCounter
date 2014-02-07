@@ -1,0 +1,11 @@
+package com.foursee.funscounter.ui.dialog;
+
+/**
+ * TODO: Missing class description for LoadingDialog!
+ * <p>
+ * &copy; Copyright 2014 Future Processing Sp z o.o.
+ * <p>
+ */
+public class LoadingDialog {
+
+}

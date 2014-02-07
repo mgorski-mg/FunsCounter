@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+    <TextView
+        android:id="@+id/gate1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/gate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/gate1"
+        android:layout_below="@+id/gate1"
+        android:layout_marginTop="42dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/gate3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/gate2"
+        android:layout_below="@+id/gate2"
+        android:layout_marginTop="30dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/gate5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/gate3"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="120dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/gate4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/gate3"
+        android:layout_below="@+id/gate3"
+        android:layout_marginTop="74dp"
+        android:text="TextView" />
+
+</RelativeLayout>

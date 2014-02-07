@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+pref_allow_empty_commit_comment=never
+pref_compression_level=3
+pref_confirm_move_tag=false
+pref_console_show_on_message=true
+pref_debug_protocol=true
+pref_ext_connection_method_proxy=extssh
+pref_first_startup=false
+pref_history_view_linking=true
+pref_projecttext_decoration={dirty_flag} [{user}] {name}  {tag}
+pref_revision_mode=1
+pref_text_ksubst=-kkv
+pref_timeout=600
+pref_use_font_decorators=true
+pref_use_quickdiffannotate=always

@@ -1,0 +1,26 @@
+// Generated code from Butter Knife. Do not modify!
+package com.foursee.funscounter.fragment;
+
+import android.view.View;
+import butterknife.ButterKnife.Finder;
+
+public class EventListFragment$$ViewInjector {
+  public static void inject(Finder finder, final com.foursee.funscounter.fragment.EventListFragment target, Object source) {
+    View view;
+    view = finder.findById(source, 2131034173);
+    if (view == null) {
+      throw new IllegalStateException("Required view with id '2131034173' for field 'progressBar' was not found. If this view is optional add '@Optional' annotation.");
+    }
+    target.progressBar = (android.widget.ProgressBar) view;
+    view = finder.findById(source, 16908292);
+    if (view == null) {
+      throw new IllegalStateException("Required view with id '16908292' for field 'emptyElement' was not found. If this view is optional add '@Optional' annotation.");
+    }
+    target.emptyElement = (android.widget.TextView) view;
+  }
+
+  public static void reset(com.foursee.funscounter.fragment.EventListFragment target) {
+    target.progressBar = null;
+    target.emptyElement = null;
+  }
+}

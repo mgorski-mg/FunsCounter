@@ -1,0 +1,73 @@
+package com.ForSee.example.maps;
+
+import android.content.Context;
+import android.util.AttributeSet;
+
+import com.ForSee.example.R;
+import com.ForSee.example.maps.overlays.MyMarkersOverlay;
+import com.ForSee.example.maps.overlays.MyRouteOverlay;
+import com.ForSee.example.models.MyJourneyModel;
+import com.ForSee.example.utils.PackageUtils;
+import com.google.android.gms.maps.MapView;
+
+public class MyMapView extends MapView {
+	private MyJourneyModel myJourneyModel;
+
+	public MyMapView(Context context, MyJourneyModel myJourneyModel) {
+		super(context);
+		this.myJourneyModel = myJourneyModel;
+	}
+
+	public MyMapView(Context context, AttributeSet attrs) {
+		super(context, attrs);
+	}
+
+	public MyMapView(Context context, AttributeSet attrs, int defStyle) {
+		super(context, attrs, defStyle);
+	}
+
+	private static String getMapApiKey(Context context) {
+		int googleApiKeyId;
+
+		if (PackageUtils.isDebugBuild(context)) {
+			googleApiKeyId = R.string.debug_map_api_key;
+		} else {
+			googleApiKeyId = R.string.releas_map_api_key;
+		}
+
+		return context.getString(googleApiKeyId);
+	}
+
+	public void init() {
+		setBuiltInZoomControls(true);
+		setClickable(true);
+		getController().setCenter(new GeoPoint(50284985, 18671703));
+		getController().setZoom(18);
+	}
+
+	public void enableHistoryMode() {
+		MyRouteOverlay myRouteOverlay = new MyRouteOverlay(getProjection(), myJourneyModel);
+		MyMarkersOverlay myMarkerOverlay = new MyMarkersOverlay();
+
+		myMarkerOverlay.setStartMarker(getResources().getDrawable(R.drawable.map_marker));
+		myMarkerOverlay.setFinnishMarker(getResources().getDrawable(R.drawable.map_marker));
+		myJourneyModel.addListener(myMarkerOverlay);
+
+		getOverlays().clear();
+		getOverlays().add(myRouteOverlay);
+		getOverlays().add(myMarkerOverlay);
+	}
+
+	public void enableJourneyMode() {
+		MyRouteOverlay myRouteOverlay = new MyRouteOverlay(getProjection(), myJourneyModel);
+		MyMarkersOverlay myMarkerOverlay = new MyMarkersOverlay();
+
+		myMarkerOverlay.setStartMarker(getResources().getDrawable(R.drawable.map_marker));
+		// myMarkerOverlay.setFinnishMarker(getResources().getDrawable(R.drawable.map_marker));
+		myJourneyModel.addListener(myMarkerOverlay);
+
+		getOverlays().clear();
+		getOverlays().add(myRouteOverlay);
+		getOverlays().add(myMarkerOverlay);
+	}
+}

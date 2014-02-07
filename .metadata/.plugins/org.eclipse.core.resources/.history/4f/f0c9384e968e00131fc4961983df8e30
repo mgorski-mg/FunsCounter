@@ -1,0 +1,11 @@
+package com.foursee.funscounter.service;
+
+/**
+ * TODO: Missing class description for EventUpdateServiceRunner!
+ * <p>
+ * &copy; Copyright 2014 Future Processing Sp z o.o.
+ * <p>
+ */
+public class EventUpdateServiceRunner {
+
+}

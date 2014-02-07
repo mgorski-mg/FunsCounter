@@ -1,0 +1,44 @@
+// Generated code from Butter Knife. Do not modify!
+package com.foursee.funscounter.fragment;
+
+import android.view.View;
+import butterknife.ButterKnife.Finder;
+
+public class ContentFragment$$ViewInjector {
+  public static void inject(Finder finder, final com.foursee.funscounter.fragment.ContentFragment target, Object source) {
+    View view;
+    view = finder.findById(source, 2131034174);
+    if (view == null) {
+      throw new IllegalStateException("Required view with id '2131034174' for field 'gate2' was not found. If this view is optional add '@Optional' annotation.");
+    }
+    target.gate2 = (android.widget.TextView) view;
+    view = finder.findById(source, 2131034176);
+    if (view == null) {
+      throw new IllegalStateException("Required view with id '2131034176' for field 'gate5' was not found. If this view is optional add '@Optional' annotation.");
+    }
+    target.gate5 = (android.widget.TextView) view;
+    view = finder.findById(source, 2131034175);
+    if (view == null) {
+      throw new IllegalStateException("Required view with id '2131034175' for field 'gate3' was not found. If this view is optional add '@Optional' annotation.");
+    }
+    target.gate3 = (android.widget.TextView) view;
+    view = finder.findById(source, 2131034173);
+    if (view == null) {
+      throw new IllegalStateException("Required view with id '2131034173' for field 'gate1' was not found. If this view is optional add '@Optional' annotation.");
+    }
+    target.gate1 = (android.widget.TextView) view;
+    view = finder.findById(source, 2131034177);
+    if (view == null) {
+      throw new IllegalStateException("Required view with id '2131034177' for field 'gate4' was not found. If this view is optional add '@Optional' annotation.");
+    }
+    target.gate4 = (android.widget.TextView) view;
+  }
+
+  public static void reset(com.foursee.funscounter.fragment.ContentFragment target) {
+    target.gate2 = null;
+    target.gate5 = null;
+    target.gate3 = null;
+    target.gate1 = null;
+    target.gate4 = null;
+  }
+}

@@ -1,0 +1,125 @@
+package com.foursee.funscounter.fragment;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+
+import com.foursee.funscounter.BaseApplication;
+import com.foursee.funscounter.R;
+import com.foursee.funscounter.model.Auth;
+import com.foursee.funscounter.model.Event;
+import com.foursee.funscounter.model.Gate;
+import com.foursee.funscounter.network.listeners.EventDataRequestListener;
+import com.foursee.funscounter.network.rest.NetworkService;
+import com.foursee.funscounter.network.rest.request.EventDataSpiceRequest;
+import com.foursee.funscounter.service.EventUpdateServiceController;
+import com.octo.android.robospice.SpiceManager;
+
+public class ContentFragment extends Fragment implements OnEventChangeListener {
+
+	private static final String EVENT_ID = "event_id";
+
+	public static ContentFragment create(int eventId) {
+		Bundle bundle = new Bundle();
+		bundle.putInt(EVENT_ID, eventId);
+		ContentFragment fragment = new ContentFragment();
+		fragment.setArguments(bundle);
+		return fragment;
+	}
+
+	@InjectView(R.id.gate1)
+	TextView gate1;
+	@InjectView(R.id.gate2)
+	TextView gate2;
+	@InjectView(R.id.gate3)
+	TextView gate3;
+	@InjectView(R.id.gate4)
+	TextView gate4;
+	@InjectView(R.id.gate5)
+	TextView gate5;
+
+	private EventUpdateServiceController serviceController;
+	private final SpiceManager spiceManager = new SpiceManager(NetworkService.class);
+	private Auth auth;
+	private Event event;
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		View view = inflater.inflate(R.layout.content_fragment, container, false);
+		ButterKnife.inject(this, view);
+		setHasOptionsMenu(true);
+		return view;
+	}
+
+	@Override
+	public void onActivityCreated(Bundle savedInstanceState) {
+		super.onActivityCreated(savedInstanceState);
+		spiceManager.start(getActivity());
+		auth = ((BaseApplication) getActivity().getApplication()).getAuth(); // TODO: inject auth
+		serviceController = new EventUpdateServiceController(getActivity());
+		loadData();
+	}
+
+	@Override
+	public void onDestroyView() {
+		super.onDestroyView();
+		ButterKnife.reset(this);
+		spiceManager.shouldStop();
+		serviceController.stopService();
+	}
+
+	@Override
+	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+		super.onCreateOptionsMenu(menu, inflater);
+		getActivity().getMenuInflater().inflate(R.menu.content_menu, menu);
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.refresh_content:
+			loadData();
+			break;
+		default:
+			break;
+		}
+		return true;
+	}
+
+	private void loadData() {
+		int eventId = getArguments().getInt(EVENT_ID);
+		spiceManager.execute(new EventDataSpiceRequest(auth, eventId), new EventDataRequestListener(this));
+	}
+
+	@Override
+	public void onEventChange() { 
+		refreshData();
+	}
+
+	public void showEventData(Event event) {
+		((BaseApplication) getActivity().getApplication()).setCurrentEvent(event);
+		this.event = event;
+		this.event.registerListener(this);
+
+		serviceController.startService(event.getId());
+
+		refreshData();
+	}
+
+	private void refreshData() {
+		Gate.List gates = event.getGates();
+		gate1.setText("Gate 1: " + gates.get(0).getAmount());
+		gate2.setText("Gate 2: " + gates.get(1).getAmount());
+		gate3.setText("Gate 3: " + gates.get(2).getAmount());
+		gate4.setText("Gate 4: " + gates.get(3).getAmount());
+		gate5.setText("Gate 5: " + gates.get(4).getAmount());
+	}
+}

@@ -1,0 +1,36 @@
+1359455851020	Delete element
+1359455946681	Rename resource 'bibelstudier_menu_and_add_button.xml'
+1359458414175	Rename resource 'bibelstudier_layout_bordered.xml'
+1359458454599	Rename resource 'bibelstudier_layout.xml'
+1359459271916	Rename resource 'activity_lessonlist_custom_view.xml'
+1359459529289	Delete element
+1359459533433	Delete element
+1359460488680	Rename resource 'bibelstudier_contact_button.xml'
+1359460609783	Delete element
+1359464886777	Delete element
+1359464897442	Rename resource 'activity_lessonslist_custom_view.xml'
+1359535613017	Rename local variable 'lessonName'
+1359551060670	Extract constant 'introTitlesPart'
+1359551102845	Extract constant 'readMoreTitlesPart'
+1359552093921	Extract constant 'lessonTitlesPart'
+1359552844057	Rename method 'getLesson'
+1359553010600	Rename method 'getText'
+1359629116064	Delete element
+1359629120422	Delete element
+1359629408032	Rename local variable 'act'
+1359629534507	Rename local variable 'arg0'
+1359629551535	Rename local variable 'view'
+1359629565071	Rename local variable 'arg2'
+1359629719682	Rename local variable 'arg0'
+1359629725229	Rename local variable 'arg1'
+1359630734567	Rename local variable 'arg0'
+1359630741075	Rename local variable 'arg1'
+1359630751585	Rename local variable 'arg2'
+1359636075494	Rename local variable 'context'
+1359636082559	Rename field 'context'
+1359636142142	Delete element
+1359639538951	Rename method 'initializeTitlesList'
+1359640616739	Rename local variable 'view'
+1359640832826	Rename field 'clickedHandler'
+1359641313845	Rename local variable 'titleView'
+1359641576028	Delete element

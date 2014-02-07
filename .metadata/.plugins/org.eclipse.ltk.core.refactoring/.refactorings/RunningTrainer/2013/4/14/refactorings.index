@@ -1,0 +1,9 @@
+1365297335557	Delete element
+1365299310511	Delete element
+1365363481622	Extract constant 'ACCURACY_HIGH'
+1365364885203	Encapsulate field 'currentVelocity'
+1365364890179	Encapsulate field 'averageVelocity'
+1365364894268	Encapsulate field 'journeyPoints'
+1365364897469	Encapsulate field 'time'
+1365364901545	Encapsulate field 'distance'
+1365365634444	Extract constant 'MIN_JOURNEY_POINTS_NUMBER'

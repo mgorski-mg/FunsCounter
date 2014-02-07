@@ -1,0 +1,38 @@
+// Generated code from Butter Knife. Do not modify!
+package com.foursee.funscounter.fragment;
+
+import android.view.View;
+import butterknife.ButterKnife.Finder;
+
+public class LoginFragment$$ViewInjector {
+  public static void inject(Finder finder, final com.foursee.funscounter.fragment.LoginFragment target, Object source) {
+    View view;
+    view = finder.findById(source, 2131034180);
+    if (view == null) {
+      throw new IllegalStateException("Required view with id '2131034180' for field 'passwordEditText' was not found. If this view is optional add '@Optional' annotation.");
+    }
+    target.passwordEditText = (android.widget.EditText) view;
+    view = finder.findById(source, 2131034179);
+    if (view == null) {
+      throw new IllegalStateException("Required view with id '2131034179' for field 'userEditText' was not found. If this view is optional add '@Optional' annotation.");
+    }
+    target.userEditText = (android.widget.EditText) view;
+    view = finder.findById(source, 2131034181);
+    if (view == null) {
+      throw new IllegalStateException("Required view with id '2131034181' for method 'tryToLogin' was not found. If this view is optional add '@Optional' annotation.");
+    }
+    view.setOnClickListener(
+      new android.view.View.OnClickListener() {
+        @Override public void onClick(
+          android.view.View p0
+        ) {
+          target.tryToLogin();
+        }
+      });
+  }
+
+  public static void reset(com.foursee.funscounter.fragment.LoginFragment target) {
+    target.passwordEditText = null;
+    target.userEditText = null;
+  }
+}

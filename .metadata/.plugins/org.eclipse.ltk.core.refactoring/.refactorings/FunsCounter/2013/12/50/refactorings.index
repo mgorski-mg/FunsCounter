@@ -1,0 +1,4 @@
+1386873237574	Rename type 'EventsListAdapter'
+1386873762084	Convert local variable 'inflater' to field
+1386874650058	Encapsulate field 'auth'
+1386876238340	Extract method 'loadEvents'

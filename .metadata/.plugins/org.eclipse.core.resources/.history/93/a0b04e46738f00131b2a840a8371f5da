@@ -1,0 +1,17 @@
+// Generated code from Butter Knife. Do not modify!
+package com.foursee.funscounter.activity;
+
+import android.view.View;
+import butterknife.ButterKnife.Finder;
+
+public class EventsActivity$$ViewInjector {
+  public static void inject(Finder finder, final com.foursee.funscounter.activity.EventsActivity target, Object source) {
+    View view;
+    view = finder.findById(source, 0);
+    target.contentContainer = (android.widget.FrameLayout) view;
+  }
+
+  public static void reset(com.foursee.funscounter.activity.EventsActivity target) {
+    target.contentContainer = null;
+  }
+}

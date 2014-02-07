@@ -1,0 +1,38 @@
+// Generated code from Butter Knife. Do not modify!
+package com.foursee.funscounter.activity;
+
+import android.view.View;
+import butterknife.ButterKnife.Finder;
+
+public class SplashActivity$$ViewInjector {
+  public static void inject(Finder finder, final com.foursee.funscounter.activity.SplashActivity target, Object source) {
+    View view;
+    view = finder.findById(source, 2131034187);
+    if (view == null) {
+      throw new IllegalStateException("Required view with id '2131034187' for method 'getEvents' was not found. If this view is optional add '@Optional' annotation.");
+    }
+    view.setOnClickListener(
+      new android.view.View.OnClickListener() {
+        @Override public void onClick(
+          android.view.View p0
+        ) {
+          target.getEvents();
+        }
+      });
+    view = finder.findById(source, 2131034189);
+    if (view == null) {
+      throw new IllegalStateException("Required view with id '2131034189' for method 'getEventData' was not found. If this view is optional add '@Optional' annotation.");
+    }
+    view.setOnClickListener(
+      new android.view.View.OnClickListener() {
+        @Override public void onClick(
+          android.view.View p0
+        ) {
+          target.getEventData();
+        }
+      });
+  }
+
+  public static void reset(com.foursee.funscounter.activity.SplashActivity target) {
+  }
+}

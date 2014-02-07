@@ -1,0 +1,200 @@
+package com.ForSee.example;
+
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.ForSee.example.contracts.IObserver;
+import com.ForSee.example.database.DataBaseAdapter;
+import com.ForSee.example.location.LocationUpdateListener;
+import com.ForSee.example.maps.RoundedMapView;
+import com.ForSee.example.models.MyJourneyModel;
+import com.ForSee.example.utils.StringUtils;
+import com.ForSee.example.utils.TimeFormatter;
+import com.ForSee.example.views.FormatableChronometer;
+import com.ForSee.example.views.TitleBar;
+import com.google.inject.Inject;
+
+import roboguice.activity.RoboMapActivity;
+import roboguice.inject.InjectView;
+
+public class MyJourneyMapActivity extends RoboMapActivity implements IObserver<MyJourneyModel> {
+	private static final String NEW_LINE = StringUtils.NEW_LINE;
+
+	@Inject
+	private MyJourneyModel myJourneyModel;
+
+	@InjectView(R.id.mapViewLayout)
+	private RoundedMapView roundedMapView;
+
+	@InjectView(R.id.chronometer)
+	private FormatableChronometer chronometer;
+
+	@InjectView(R.id.timeText)
+	private TextView timeTextView;
+
+	@InjectView(R.id.distanceText)
+	private TextView distanceTextView;
+
+	@InjectView(R.id.tempoText)
+	private TextView tempoTextView;
+
+	@InjectView(R.id.caloriesText)
+	private TextView caloriesTextView;
+
+	@InjectView(R.id.currentVelocityText)
+	private TextView currentVelocityTextView;
+
+	@InjectView(R.id.averageVelocityText)
+	private TextView averageVelocityTextView;
+
+	private LocationUpdateListener locationListener;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		TitleBar titleBar = new TitleBar(this);
+		titleBar.setTitle((String) getTitle());
+		titleBar.showTitleBar();
+
+		setContentView(R.layout.my_journey_map_activity);
+
+		myJourneyModel.addListener(this);
+
+		roundedMapView.initJourneyMapView(myJourneyModel);
+
+		locationListener = new LocationUpdateListener(this, myJourneyModel, roundedMapView.getMyMapView());
+		locationListener.start();
+	}
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+
+		locationListener.stop();
+	}
+
+	@Override
+	public void onChange(MyJourneyModel model) {
+		if (model.getStartTime() == 0) {
+			chronometer.init(myJourneyModel, timeTextView);
+			chronometer.start();
+		}
+
+		updateTempo(model);
+
+		String distanceText = getString(R.string.distance);
+		distanceTextView.setText(distanceText + NEW_LINE + model.getDistance() + " km");
+
+		String caloriesText = getString(R.string.calories_burned);
+		caloriesTextView.setText(caloriesText + NEW_LINE + model.getCalories());
+
+		String currentVelocityText = getString(R.string.current_velocity);
+		currentVelocityTextView.setText(currentVelocityText + NEW_LINE + model.getCurrentVelocity() + " km/h");
+
+		String averageVelocityText = getString(R.string.average_velocity);
+		averageVelocityTextView.setText(averageVelocityText + NEW_LINE + model.getAverageVelocity() + " km/h");
+
+		// TODO
+	}
+
+	private void updateTempo(MyJourneyModel model) {
+		String format = getString(R.string.minutes_and_seconds_format);
+		String tempo = TimeFormatter.formatTime((long) model.getTempo(), format);
+
+		String tempoText = getString(R.string.tempo);
+		String tempoString = tempoText + NEW_LINE + tempo + " min/km";
+
+		tempoTextView.setText(tempoString);
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.my_journey_map_activity, menu);
+		return super.onCreateOptionsMenu(menu);
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(final MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.addMap:
+			stop();
+			createDialog();
+			break;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+
+	private void createDialog() {
+		final EditText view = new EditText(getApplicationContext());
+
+		new AlertDialog.Builder(this) //
+				.setTitle(getString(R.string.add_journey)) //
+				.setMessage(getString(R.string.enter_journeys_name)) //
+				.setView(view) //
+				.setPositiveButton(getString(R.string.ok), new OnClickListener() {
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						addJoureyToHostory(view.getText().toString());
+					}
+				}) //
+				.setNegativeButton(getString(R.string.cancel), new OnClickListener() {
+
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						start();
+					}
+				}).show();
+	}
+
+	private void addJoureyToHostory(String name) {
+		boolean result;
+		if (myJourneyModel.getRoutePoints().size() > 0) {
+			myJourneyModel.setRouteName(name);
+
+			DataBaseAdapter dbAdapter = DataBaseAdapter.getInstace(getApplicationContext());
+			dbAdapter.open();
+			result = dbAdapter.addJourney(myJourneyModel);
+			dbAdapter.close();
+		} else {
+			result = false;
+		}
+
+		showMessage(result);
+	}
+
+	private void showMessage(boolean result) {
+		String message;
+		if (result) {
+			message = getString(R.string.add_success);
+			onBackPressed();
+		} else {
+			message = getString(R.string.add_fail);
+			start();
+		}
+		Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+	}
+
+	private void stop() {
+		chronometer.stop();
+		locationListener.stop();
+	}
+
+	private void start() {
+		chronometer.start();
+		locationListener.start();
+	}
+
+	@Override
+	protected boolean isRouteDisplayed() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+}

@@ -1,0 +1,89 @@
+package com.ForSee.example.maps;
+
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
+import android.graphics.RectF;
+import android.util.AttributeSet;
+import android.widget.LinearLayout;
+
+import com.ForSee.example.R;
+import com.ForSee.example.models.MyJourneyModel;
+import com.google.android.gms.maps.MapView;
+
+public class RoundedMapView extends LinearLayout {
+	private MapView mapView;
+	private Bitmap windowFrame;
+
+	public RoundedMapView(Context context, AttributeSet attrs) {
+		super(context, attrs);
+	}
+
+	public RoundedMapView(Context context) {
+		super(context);
+	}
+
+	public void initJourneyMapView(MyJourneyModel myJourneyModel) {
+		initMap(myJourneyModel);
+		//mapView.enableJourneyMode();
+	}
+
+	public void initHistoryMapView(MyJourneyModel myJourneyModel) {
+		initMap(myJourneyModel);
+		//mapView.enableHistoryMode();
+	}
+
+	private void initMap(MyJourneyModel myJourneyModel) {
+		mapView = new MyMapView(getContext(), myJourneyModel);
+		//mapView.init();
+
+		addView(mapView, new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
+	}
+
+	@Override
+	protected void dispatchDraw(Canvas canvas) {
+		super.dispatchDraw(canvas); // Call super first (this draws the map) we then draw on top of it
+
+		if (windowFrame == null) {
+			createWindowFrame(); // Lazy creation of the window frame, this is needed as we don't know the width & height of the screen until draw time
+		}
+
+		canvas.drawBitmap(windowFrame, 0, 0, null);
+	}
+
+	protected void createWindowFrame() {
+		windowFrame = Bitmap.createBitmap(getWidth(), getHeight(), Bitmap.Config.ARGB_8888); // Create a new image we will draw over the map
+		Canvas osCanvas = new Canvas(windowFrame);
+
+		RectF outerRectangle = new RectF(0, 0, getWidth(), getHeight());
+		RectF innerRectangle = new RectF(1, 1, getWidth() - 1, getHeight() - 1);
+
+		float cornerRadius = getResources().getDimension(R.dimen.corner_radius);
+
+		Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG); // Anti alias allows for smooth corners
+		int backgroundColor = getResources().getColor(R.color.avtivities_background_color);
+		paint.setColor(backgroundColor);
+		osCanvas.drawRect(outerRectangle, paint);
+
+		int borderColor = getResources().getColor(R.color.black);
+		paint.setColor(borderColor);
+		osCanvas.drawRoundRect(outerRectangle, cornerRadius, cornerRadius, paint);
+
+		paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_OUT)); // A out B http://en.wikipedia.org/wiki/File:Alpha_compositing.svg
+		osCanvas.drawRoundRect(innerRectangle, cornerRadius, cornerRadius, paint);
+	}
+
+	@Override
+	protected void onLayout(boolean changed, int l, int t, int r, int b) {
+		super.onLayout(changed, l, t, r, b);
+
+		windowFrame = null; // If the layout changes null our frame so it can be recreated with the new width and height
+	}
+
+	public MyMapView getMyMapView() {
+		return mapView;
+	}
+}

@@ -1,0 +1,13 @@
+INDEX VERSION 1.126+D:\dev\Android\4See\FunsCounter\.metadata\.plugins\org.eclipse.jdt.core
+321256232.index
+1506220422.index
+1994477313.index
+2539170916.index
+615780804.index
+2832958596.index
+2758273453.index
+3515282563.index
+665058431.index
+2410369457.index
+3373866803.index
+1354904183.index

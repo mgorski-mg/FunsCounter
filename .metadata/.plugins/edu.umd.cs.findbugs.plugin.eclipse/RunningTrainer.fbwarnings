@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2" sequence="1" timestamp="1374011236933" analysisTimestamp="1374011233583" release="">
+  <Project projectName="RunningTrainer">
+    <Jar>D:\dev\Android\4See\Example\bin\classes</Jar>
+    <AuxClasspathEntry>D:\dev\Android\4See\Example\libs\guice-3.0-no_aop.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>D:\dev\Android\4See\Example\libs\roboguice-2.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>D:\dev\Android\4See\Example\libs\javax.inject.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>D:\dev\Android\4See\Example\libs\android-support-v4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>D:\dev\Android\4See\google-play-services_lib\libs\google-play-services.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>D:\dev\Android\4See\Example\bin\classes</AuxClasspathEntry>
+    <AuxClasspathEntry>D:\dev\Android\4See\google-play-services_lib\bin\google-play-services_lib.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Zlatan\Desktop\AndroidEclipse\sdk\tools\support\annotations.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Zlatan\Desktop\AndroidEclipse\sdk\platforms\android-8\android.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Zlatan\Desktop\AndroidEclipse\sdk\add-ons\addon-google_apis-google-8\libs\maps.jar</AuxClasspathEntry>
+    <SrcDir>D:\dev\Android\4See\Example\src</SrcDir>
+    <SrcDir>D:\dev\Android\4See\Example\gen</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <BugInstance type="ICAST_IDIV_CAST_TO_DOUBLE" priority="2" abbrev="ICAST" category="STYLE" first="1">
+    <Class classname="com.ForSee.example.HistorySummaryActivity">
+      <SourceLine classname="com.ForSee.example.HistorySummaryActivity" sourcefile="HistorySummaryActivity.java" sourcepath="com/ForSee/example/HistorySummaryActivity.java"/>
+    </Class>
+    <Method classname="com.ForSee.example.HistorySummaryActivity" name="getTotalModel" signature="()Lcom/ForSee/example/models/MyJourneyModel;" isStatic="false">
+      <SourceLine classname="com.ForSee.example.HistorySummaryActivity" start="82" end="104" startBytecode="0" endBytecode="364" sourcefile="HistorySummaryActivity.java" sourcepath="com/ForSee/example/HistorySummaryActivity.java"/>
+    </Method>
+    <SourceLine classname="com.ForSee.example.HistorySummaryActivity" start="95" end="95" startBytecode="88" endBytecode="88" sourcefile="HistorySummaryActivity.java" sourcepath="com/ForSee/example/HistorySummaryActivity.java"/>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="com.ForSee.example.R$anim">
+      <SourceLine classname="com.ForSee.example.R$anim" start="11" end="11" sourcefile="R.java" sourcepath="com/ForSee/example/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="com.ForSee.example.R$attr">
+      <SourceLine classname="com.ForSee.example.R$attr" start="14" end="14" sourcefile="R.java" sourcepath="com/ForSee/example/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="com.ForSee.example.R$color">
+      <SourceLine classname="com.ForSee.example.R$color" start="134" end="134" sourcefile="R.java" sourcepath="com/ForSee/example/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="com.ForSee.example.R$dimen">
+      <SourceLine classname="com.ForSee.example.R$dimen" start="164" end="164" sourcefile="R.java" sourcepath="com/ForSee/example/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="com.ForSee.example.R$drawable">
+      <SourceLine classname="com.ForSee.example.R$drawable" start="175" end="175" sourcefile="R.java" sourcepath="com/ForSee/example/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="com.ForSee.example.R$id">
+      <SourceLine classname="com.ForSee.example.R$id" start="230" end="230" sourcefile="R.java" sourcepath="com/ForSee/example/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="com.ForSee.example.R$layout">
+      <SourceLine classname="com.ForSee.example.R$layout" start="270" end="270" sourcefile="R.java" sourcepath="com/ForSee/example/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="com.ForSee.example.R$menu">
+      <SourceLine classname="com.ForSee.example.R$menu" start="283" end="283" sourcefile="R.java" sourcepath="com/ForSee/example/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="com.ForSee.example.R$string">
+      <SourceLine classname="com.ForSee.example.R$string" start="286" end="286" sourcefile="R.java" sourcepath="com/ForSee/example/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="com.ForSee.example.R$style">
+      <SourceLine classname="com.ForSee.example.R$style" start="401" end="401" sourcefile="R.java" sourcepath="com/ForSee/example/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="com.ForSee.example.R$styleable">
+      <SourceLine classname="com.ForSee.example.R$styleable" start="408" end="652" sourcefile="R.java" sourcepath="com/ForSee/example/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N" first="1">
+    <Class classname="com.ForSee.example.utils.PackageUtils">
+      <SourceLine classname="com.ForSee.example.utils.PackageUtils" sourcefile="PackageUtils.java" sourcepath="com/ForSee/example/utils/PackageUtils.java"/>
+    </Class>
+    <Method classname="com.ForSee.example.utils.PackageUtils" name="isDebugBuild" signature="(Landroid/content/Context;)Z" isStatic="true">
+      <SourceLine classname="com.ForSee.example.utils.PackageUtils" start="16" end="28" startBytecode="0" endBytecode="199" sourcefile="PackageUtils.java" sourcepath="com/ForSee/example/utils/PackageUtils.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="6" end="6" startBytecode="0" endBytecode="65" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="com.ForSee.example.utils.PackageUtils" start="22" end="22" startBytecode="46" endBytecode="46" sourcefile="PackageUtils.java" sourcepath="com/ForSee/example/utils/PackageUtils.java"/>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="com.google.android.gms.R$attr">
+      <SourceLine classname="com.google.android.gms.R$attr" start="10" end="10" sourcefile="R.java" sourcepath="com/google/android/gms/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="com.google.android.gms.R$color">
+      <SourceLine classname="com.google.android.gms.R$color" start="26" end="26" sourcefile="R.java" sourcepath="com/google/android/gms/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="com.google.android.gms.R$drawable">
+      <SourceLine classname="com.google.android.gms.R$drawable" start="40" end="40" sourcefile="R.java" sourcepath="com/google/android/gms/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="com.google.android.gms.R$id">
+      <SourceLine classname="com.google.android.gms.R$id" start="66" end="66" sourcefile="R.java" sourcepath="com/google/android/gms/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="com.google.android.gms.R$string">
+      <SourceLine classname="com.google.android.gms.R$string" start="73" end="73" sourcefile="R.java" sourcepath="com/google/android/gms/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="com.google.android.gms.R$styleable">
+      <SourceLine classname="com.google.android.gms.R$styleable" start="96" end="111" sourcefile="R.java" sourcepath="com/google/android/gms/R.java"/>
+    </Class>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 16 Jul 2013 23:47:09 +0200" total_classes="79" referenced_classes="305" total_bugs="19" total_size="2338" num_packages="14" vm_version="23.25-b01" cpu_seconds="3.76" clock_seconds="3.35" peak_mbytes="210.39" alloc_mbytes="742.44" gc_seconds="0.22" priority_2="18" priority_1="1">
+    <PackageStats package="com.ForSee.example" total_bugs="12" total_types="31" total_size="797" priority_2="12">
+      <ClassStats class="com.ForSee.example.AboutActivity" sourceFile="AboutActivity.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.ForSee.example.BuildConfig" sourceFile="BuildConfig.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.ForSee.example.HistoryListActivity" sourceFile="HistoryListActivity.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="com.ForSee.example.HistoryListActivity$1" sourceFile="HistoryListActivity.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.ForSee.example.HistorySummaryActivity" sourceFile="HistorySummaryActivity.java" interface="false" size="59" bugs="1" priority_2="1"/>
+      <ClassStats class="com.ForSee.example.HistoryTabActivity" sourceFile="HistoryTabActivity.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="com.ForSee.example.MainActivity" sourceFile="MainActivity.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.ForSee.example.MainActivity$1" sourceFile="MainActivity.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.ForSee.example.MainActivity$2" sourceFile="MainActivity.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.ForSee.example.MainActivity$3" sourceFile="MainActivity.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.ForSee.example.MainActivity$4" sourceFile="MainActivity.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.ForSee.example.MyJourneyHistoryActivity" sourceFile="MyJourneyHistoryActivity.java" interface="false" size="94" bugs="0"/>
+      <ClassStats class="com.ForSee.example.MyJourneyHistoryActivity$1" sourceFile="MyJourneyHistoryActivity.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.ForSee.example.MyJourneyMapActivity" sourceFile="MyJourneyMapActivity.java" interface="false" size="108" bugs="0"/>
+      <ClassStats class="com.ForSee.example.MyJourneyMapActivity$1" sourceFile="MyJourneyMapActivity.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.ForSee.example.MyJourneyMapActivity$2" sourceFile="MyJourneyMapActivity.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.ForSee.example.R" sourceFile="R.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.ForSee.example.R$anim" sourceFile="R.java" interface="false" size="4" bugs="1" priority_2="1"/>
+      <ClassStats class="com.ForSee.example.R$attr" sourceFile="R.java" interface="false" size="17" bugs="1" priority_2="1"/>
+      <ClassStats class="com.ForSee.example.R$color" sourceFile="R.java" interface="false" size="29" bugs="1" priority_2="1"/>
+      <ClassStats class="com.ForSee.example.R$dimen" sourceFile="R.java" interface="false" size="10" bugs="1" priority_2="1"/>
+      <ClassStats class="com.ForSee.example.R$drawable" sourceFile="R.java" interface="false" size="56" bugs="1" priority_2="1"/>
+      <ClassStats class="com.ForSee.example.R$id" sourceFile="R.java" interface="false" size="41" bugs="1" priority_2="1"/>
+      <ClassStats class="com.ForSee.example.R$layout" sourceFile="R.java" interface="false" size="14" bugs="1" priority_2="1"/>
+      <ClassStats class="com.ForSee.example.R$menu" sourceFile="R.java" interface="false" size="4" bugs="1" priority_2="1"/>
+      <ClassStats class="com.ForSee.example.R$string" sourceFile="R.java" interface="false" size="62" bugs="1" priority_2="1"/>
+      <ClassStats class="com.ForSee.example.R$style" sourceFile="R.java" interface="false" size="8" bugs="1" priority_2="1"/>
+      <ClassStats class="com.ForSee.example.R$styleable" sourceFile="R.java" interface="false" size="25" bugs="1" priority_2="1"/>
+      <ClassStats class="com.ForSee.example.SplashActivity" sourceFile="SplashActivity.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="com.ForSee.example.UsersActivity" sourceFile="UsersActivity.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.ForSee.example.UsersActivity$1" sourceFile="UsersActivity.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ForSee.example.adapters" total_bugs="0" total_types="3" total_size="106">
+      <ClassStats class="com.ForSee.example.adapters.HistoryListAdapter" sourceFile="HistoryListAdapter.java" interface="false" size="60" bugs="0"/>
+      <ClassStats class="com.ForSee.example.adapters.HistoryListAdapter$1" sourceFile="HistoryListAdapter.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="com.ForSee.example.adapters.HistoryListAdapter$ViewHolder" sourceFile="HistoryListAdapter.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ForSee.example.application" total_bugs="0" total_types="1" total_size="9">
+      <ClassStats class="com.ForSee.example.application.MyApplication" sourceFile="MyApplication.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ForSee.example.contracts" total_bugs="0" total_types="2" total_size="5">
+      <ClassStats class="com.ForSee.example.contracts.IObservable" sourceFile="IObservable.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="com.ForSee.example.contracts.IObserver" sourceFile="IObserver.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ForSee.example.database" total_bugs="0" total_types="5" total_size="237">
+      <ClassStats class="com.ForSee.example.database.DataBaseAdapter" sourceFile="DataBaseAdapter.java" interface="false" size="132" bugs="0"/>
+      <ClassStats class="com.ForSee.example.database.JoureysTable" sourceFile="JoureysTable.java" interface="false" size="22" bugs="0"/>
+      <ClassStats class="com.ForSee.example.database.JourneysDatabaseHelper" sourceFile="JourneysDatabaseHelper.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="com.ForSee.example.database.MockRoutesHistory" sourceFile="MockRoutesHistory.java" interface="false" size="53" bugs="0"/>
+      <ClassStats class="com.ForSee.example.database.UsersTable" sourceFile="UsersTable.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ForSee.example.listeners" total_bugs="0" total_types="2" total_size="56">
+      <ClassStats class="com.ForSee.example.listeners.AnimationEndListener" sourceFile="AnimationEndListener.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="com.ForSee.example.listeners.ChronometerListener" sourceFile="ChronometerListener.java" interface="false" size="36" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ForSee.example.location" total_bugs="0" total_types="1" total_size="59">
+      <ClassStats class="com.ForSee.example.location.LocationUpdateListener" sourceFile="LocationUpdateListener.java" interface="false" size="59" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ForSee.example.maps" total_bugs="0" total_types="2" total_size="93">
+      <ClassStats class="com.ForSee.example.maps.MyMapView" sourceFile="MyMapView.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="com.ForSee.example.maps.RoundedMapView" sourceFile="RoundedMapView.java" interface="false" size="50" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ForSee.example.maps.calculators" total_bugs="0" total_types="2" total_size="36">
+      <ClassStats class="com.ForSee.example.maps.calculators.BoundingBoxCalculator" sourceFile="BoundingBoxCalculator.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="com.ForSee.example.maps.calculators.CaloriesCalculator" sourceFile="CaloriesCalculator.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ForSee.example.maps.overlays" total_bugs="0" total_types="2" total_size="89">
+      <ClassStats class="com.ForSee.example.maps.overlays.MyMarkersOverlay" sourceFile="MyMarkersOverlay.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.ForSee.example.maps.overlays.MyRouteOverlay" sourceFile="MyRouteOverlay.java" interface="false" size="49" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ForSee.example.models" total_bugs="0" total_types="4" total_size="187">
+      <ClassStats class="com.ForSee.example.models.BaseObservable" sourceFile="BaseObservable.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.ForSee.example.models.BoundingBox" sourceFile="BoundingBox.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="com.ForSee.example.models.MyJourneyModel" sourceFile="MyJourneyModel.java" interface="false" size="121" bugs="0"/>
+      <ClassStats class="com.ForSee.example.models.User" sourceFile="User.java" interface="false" size="16" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ForSee.example.utils" total_bugs="1" total_types="5" total_size="70" priority_1="1">
+      <ClassStats class="com.ForSee.example.utils.ConstantValuesUtils" sourceFile="ConstantValuesUtils.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.ForSee.example.utils.CoordinatesUtils" sourceFile="CoordinatesUtils.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.ForSee.example.utils.PackageUtils" sourceFile="PackageUtils.java" interface="false" size="23" bugs="1" priority_1="1"/>
+      <ClassStats class="com.ForSee.example.utils.StringUtils" sourceFile="StringUtils.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.ForSee.example.utils.TimeFormatter" sourceFile="TimeFormatter.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.ForSee.example.views" total_bugs="0" total_types="12" total_size="479">
+      <ClassStats class="com.ForSee.example.views.AutoResizeTextView" sourceFile="AutoResizeTextView.java" interface="false" size="122" bugs="0"/>
+      <ClassStats class="com.ForSee.example.views.FormatableChronometer" sourceFile="FormatableChronometer.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.ForSee.example.views.NumberPicker" sourceFile="NumberPicker.java" interface="false" size="182" bugs="0"/>
+      <ClassStats class="com.ForSee.example.views.NumberPicker$1" sourceFile="NumberPicker.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.ForSee.example.views.NumberPicker$2" sourceFile="NumberPicker.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.ForSee.example.views.NumberPicker$3" sourceFile="NumberPicker.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.ForSee.example.views.NumberPicker$4" sourceFile="NumberPicker.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.ForSee.example.views.NumberPicker$5" sourceFile="NumberPicker.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.ForSee.example.views.NumberPicker$6" sourceFile="NumberPicker.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.ForSee.example.views.NumberPicker$ButtonRepeater" sourceFile="NumberPicker.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="com.ForSee.example.views.NumberPicker$ValueChangeListener" sourceFile="NumberPicker.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="com.ForSee.example.views.TitleBar" sourceFile="TitleBar.java" interface="false" size="90" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.google.android.gms" total_bugs="6" total_types="7" total_size="115" priority_2="6">
+      <ClassStats class="com.google.android.gms.R" sourceFile="R.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.google.android.gms.R$attr" sourceFile="R.java" interface="false" size="17" bugs="1" priority_2="1"/>
+      <ClassStats class="com.google.android.gms.R$color" sourceFile="R.java" interface="false" size="15" bugs="1" priority_2="1"/>
+      <ClassStats class="com.google.android.gms.R$drawable" sourceFile="R.java" interface="false" size="27" bugs="1" priority_2="1"/>
+      <ClassStats class="com.google.android.gms.R$id" sourceFile="R.java" interface="false" size="8" bugs="1" priority_2="1"/>
+      <ClassStats class="com.google.android.gms.R$string" sourceFile="R.java" interface="false" size="24" bugs="1" priority_2="1"/>
+      <ClassStats class="com.google.android.gms.R$styleable" sourceFile="R.java" interface="false" size="21" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="527" invocations="696" avgMicrosecondsPerInvocation="757" maxMicrosecondsPerInvocation="2029" standardDeviationMircosecondsPerInvocation="246"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="286" invocations="2" avgMicrosecondsPerInvocation="143176" maxMicrosecondsPerInvocation="217891" standardDeviationMircosecondsPerInvocation="74714"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="172" invocations="683" avgMicrosecondsPerInvocation="253" maxMicrosecondsPerInvocation="31797" standardDeviationMircosecondsPerInvocation="1241"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="138" invocations="351" avgMicrosecondsPerInvocation="393" maxMicrosecondsPerInvocation="4623" standardDeviationMircosecondsPerInvocation="561"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="114" invocations="354" avgMicrosecondsPerInvocation="322" maxMicrosecondsPerInvocation="4812" standardDeviationMircosecondsPerInvocation="475"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="110" invocations="354" avgMicrosecondsPerInvocation="311" maxMicrosecondsPerInvocation="4210" standardDeviationMircosecondsPerInvocation="468"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="95" invocations="370" avgMicrosecondsPerInvocation="257" maxMicrosecondsPerInvocation="2640" standardDeviationMircosecondsPerInvocation="330"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="93" invocations="376" avgMicrosecondsPerInvocation="248" maxMicrosecondsPerInvocation="4193" standardDeviationMircosecondsPerInvocation="407"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="91" invocations="305" avgMicrosecondsPerInvocation="299" maxMicrosecondsPerInvocation="45224" standardDeviationMircosecondsPerInvocation="2590"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="86" invocations="305" avgMicrosecondsPerInvocation="284" maxMicrosecondsPerInvocation="31370" standardDeviationMircosecondsPerInvocation="1810"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="75" invocations="354" avgMicrosecondsPerInvocation="212" maxMicrosecondsPerInvocation="1839" standardDeviationMircosecondsPerInvocation="231"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="67" invocations="273" avgMicrosecondsPerInvocation="247" maxMicrosecondsPerInvocation="3291" standardDeviationMircosecondsPerInvocation="349"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="58" invocations="358" avgMicrosecondsPerInvocation="162" maxMicrosecondsPerInvocation="10084" standardDeviationMircosecondsPerInvocation="576"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="51" invocations="2595" avgMicrosecondsPerInvocation="19" maxMicrosecondsPerInvocation="31993" standardDeviationMircosecondsPerInvocation="628"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindSelfComparison" totalMilliseconds="49" invocations="79" avgMicrosecondsPerInvocation="628" maxMicrosecondsPerInvocation="33806" standardDeviationMircosecondsPerInvocation="3770"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.IntCast2LongAsInstant" totalMilliseconds="43" invocations="79" avgMicrosecondsPerInvocation="554" maxMicrosecondsPerInvocation="28346" standardDeviationMircosecondsPerInvocation="3170"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="36" invocations="305" avgMicrosecondsPerInvocation="119" maxMicrosecondsPerInvocation="2329" standardDeviationMircosecondsPerInvocation="238"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RepeatedConditionals" totalMilliseconds="36" invocations="79" avgMicrosecondsPerInvocation="456" maxMicrosecondsPerInvocation="23195" standardDeviationMircosecondsPerInvocation="2585"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="35" invocations="305" avgMicrosecondsPerInvocation="117" maxMicrosecondsPerInvocation="2861" standardDeviationMircosecondsPerInvocation="266"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="34" invocations="305" avgMicrosecondsPerInvocation="114" maxMicrosecondsPerInvocation="1608" standardDeviationMircosecondsPerInvocation="252"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="32" invocations="79" avgMicrosecondsPerInvocation="413" maxMicrosecondsPerInvocation="2095" standardDeviationMircosecondsPerInvocation="427"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="27" invocations="376" avgMicrosecondsPerInvocation="73" maxMicrosecondsPerInvocation="1135" standardDeviationMircosecondsPerInvocation="95"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="27" invocations="79" avgMicrosecondsPerInvocation="351" maxMicrosecondsPerInvocation="3002" standardDeviationMircosecondsPerInvocation="573"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="27" invocations="354" avgMicrosecondsPerInvocation="78" maxMicrosecondsPerInvocation="1231" standardDeviationMircosecondsPerInvocation="117"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="26" invocations="351" avgMicrosecondsPerInvocation="74" maxMicrosecondsPerInvocation="1078" standardDeviationMircosecondsPerInvocation="100"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="25" invocations="618" avgMicrosecondsPerInvocation="41" maxMicrosecondsPerInvocation="1621" standardDeviationMircosecondsPerInvocation="88"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="25" invocations="305" avgMicrosecondsPerInvocation="82" maxMicrosecondsPerInvocation="1649" standardDeviationMircosecondsPerInvocation="183"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="24" invocations="79" avgMicrosecondsPerInvocation="304" maxMicrosecondsPerInvocation="3145" standardDeviationMircosecondsPerInvocation="498"/>
+      <ClassProfile name="edu.umd.cs.findbugs.DetectorToDetector2Adapter" totalMilliseconds="22" invocations="9458" avgMicrosecondsPerInvocation="2" maxMicrosecondsPerInvocation="391" standardDeviationMircosecondsPerInvocation="4"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="21" invocations="305" avgMicrosecondsPerInvocation="69" maxMicrosecondsPerInvocation="1506" standardDeviationMircosecondsPerInvocation="131"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.URLProblems" totalMilliseconds="21" invocations="79" avgMicrosecondsPerInvocation="265" maxMicrosecondsPerInvocation="2221" standardDeviationMircosecondsPerInvocation="420"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="20" invocations="79" avgMicrosecondsPerInvocation="260" maxMicrosecondsPerInvocation="2765" standardDeviationMircosecondsPerInvocation="388"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1374011236933" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>

@@ -1,0 +1,33 @@
+1386015346354	Delete elements
+1386016449314	Move compilation unit
+1386016705092	Encapsulate field 'type'
+1386016709822	Encapsulate field 'description'
+1386016715560	Encapsulate field 'date'
+1386016798424	Encapsulate field 'id'
+1386016854759	Rename type 'WallServerAdapter'
+1386016861369	Rename type 'IQueries'
+1386017887318	Delete element
+1386018993020	Move compilation unit
+1386021370891	Encapsulate field 'IMEI'
+1386021378544	Encapsulate field 'Telephone'
+1386022505187	Copy compilation unit
+1386022518551	Encapsulate field 'response'
+1386455504880	Rename package 'com.foursee.funscounter.rest'
+1386456052137	Move compilation unit
+1386456058131	Delete element
+1386460593404	Delete element
+1386460858234	Convert local variable 'dialog' to field
+1386501689029	Encapsulate field 'id'
+1386501693087	Encapsulate field 'number'
+1386501697258	Encapsulate field 'type'
+1386501706287	Encapsulate field 'description'
+1386501709824	Encapsulate field 'amount'
+1386502106525	Encapsulate field 'gates'
+1386505800394	Copy compilation unit
+1386507009555	Convert local variable 'authString' to field
+1386507683059	Encapsulate field 'userName'
+1386507685700	Encapsulate field 'password'
+1386528604102	Convert local variable 'auth' to field
+1386528696240	Delete element
+1386528703219	Delete element
+1386528709511	Delete element

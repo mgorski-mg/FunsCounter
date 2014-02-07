@@ -1,0 +1,161 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/clouds"
+    android:orientation="vertical"
+    tools:context=".LessonActivity" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.1"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/abs__dropdownitem_text_padding_right"
+        android:paddingLeft="@dimen/about_text_marigin"
+        android:paddingRight="@dimen/about_text_marigin"
+        android:paddingTop="@dimen/abs__dropdownitem_text_padding_right" >
+        
+        <ImageView
+            android:id="@+id/lesson_head_image"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:paddingRight="@dimen/abs__dropdownitem_text_padding_right"
+            android:src="@drawable/q" />
+        
+        <TextView
+            android:id="@+id/lesson_question"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.35"
+            android:gravity="center_vertical"
+            android:textColor="@color/bibelstudier_black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lesson_topic_counter"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:layout_gravity="fill"
+            android:textColor="@color/bibelstudier_black"
+            android:background="@layout/bibelstudier_layout_light"
+            android:layout_marginBottom="@dimen/topic_counter_bottom_margin" />
+    	
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.05"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/abs__dropdownitem_text_padding_right"
+        android:paddingLeft="@dimen/about_text_marigin"
+        android:paddingRight="@dimen/about_text_marigin"
+        android:paddingTop="@dimen/abs__dropdownitem_text_padding_right" >
+        
+        <ImageView
+            android:id="@+id/lesson_description_image"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:paddingRight="@dimen/abs__dropdownitem_text_padding_right"
+            android:src="@drawable/lesson_icon" />
+    
+		<TextView
+ 			android:id="@+id/lesson_description"
+      		android:layout_width="wrap_content"
+     		android:layout_height="wrap_content"
+      		android:textColor="@color/bibelstudier_black"
+       		android:textColorLink="@color/bibelstudier_black"
+       		android:text="@string/lesson_explanation" />
+	
+	</LinearLayout>
+	
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.1"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/abs__dropdownitem_text_padding_right"
+        android:paddingLeft="@dimen/about_text_marigin"
+        android:paddingRight="@dimen/about_text_marigin"
+        android:paddingTop="@dimen/abs__dropdownitem_text_padding_right" >
+        
+        <ImageView
+            android:id="@+id/lesson_explanation_image"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:paddingRight="@dimen/abs__dropdownitem_text_padding_right"
+            android:src="@drawable/a" />
+        
+    	<TextView
+        	android:id="@+id/lesson_explanation" 
+     		android:layout_width="wrap_content"
+     		android:layout_height="fill_parent"
+      		android:gravity="center_vertical"
+      		android:text="@string/lesson_explanation"
+      		android:textColor="@color/bibelstudier_black"
+      		android:textColorLink="@color/bibelstudier_black"
+      		android:textStyle="bold" />
+    
+    </LinearLayout>
+    
+    <RadioGroup
+        android:id="@+id/lesson_answers"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.9"
+        android:paddingBottom="@dimen/abs__dropdownitem_text_padding_right"
+        android:paddingLeft="@dimen/about_text_marigin"
+        android:paddingRight="@dimen/about_text_marigin" >
+
+        <RadioButton
+            android:id="@+id/lesson_answer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:textStyle="bold"
+            android:button="@drawable/bibelstudier_radio_button" />
+
+        <RadioButton
+            android:id="@+id/lesson_answer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:button="@drawable/bibelstudier_radio_button" />
+
+        <RadioButton
+            android:id="@+id/lesson_answer3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:button="@drawable/bibelstudier_radio_button" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.15" 
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/lesson_read_more"
+            style="@style/lessonReadModeStyle"
+            android:layout_weight="0.3"
+            android:text="@string/read_more" />
+        
+        <View android:id="@+id/strut"
+        	android:layout_width="fill_parent"
+        	android:layout_height="fill_parent" 
+        	android:layout_weight="0.4" />	
+        
+        <Button
+            android:id="@+id/lesson_next"
+            style="@style/lessonNextStyle"
+            android:layout_weight="0.3"
+            android:text="@string/next"/>
+
+    </LinearLayout>
+
+</LinearLayout>

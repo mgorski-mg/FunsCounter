@@ -1,0 +1,21 @@
+package com.foursee.funscounter.ui.dialog;
+
+import android.app.ProgressDialog;
+
+import com.foursee.funscounter.R;
+
+public class LoadingDialog {
+
+	private final ProgressDialog dialog;
+
+	public LoadingDialog() {
+		dialog = new ProgressDialog(fragment.getActivity());
+		dialog.setCancelable(false);
+		dialog.setIndeterminate(false);
+		dialog.setMessage(R.string.wait);
+	}
+
+	public void show() {
+
+	}
+}

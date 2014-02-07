@@ -1,0 +1,13 @@
+//com.springsource.config.ui.prefs.activePageIndex\:/BusMobileServicesWebApp/src/java/com/kizoom/bus/mobileservices/idtv/servlet-beans.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/BusMobileServicesWebApp/src/java/com/kizoom/bus/mobileservices/messages/beans.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/BusMobileServicesWebApp/src/java/com/kizoom/bus/mobileservices/servlet-beans.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/BusMobileServicesWebApp/src/java/com/kizoom/bus/mobileservices/stopfinder/indexing.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/BusMobileServicesWebApp/src/java/com/kizoom/bus/mobileservices/webapp-beans.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/BusMobileServicesWebApp/src/war/WEB-INF/reporting/reporting-beans.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/BusMobileServicesWebApp/src/war/WEB-INF/reporting/traveline/reporting-beans.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/CommonUtil/src/java/com/kizoom/common/beans.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/GoogleServices/src/java/beans.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/MobileDevicesWurflApi/src/test/com/kizoom/mobile/wurfl/WurflApiDeviceTypeFinderTest-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/NaptanModel/src/java/beans.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/NaptanPersonalisation/src/java/ear-appContext.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+eclipse.preferences.version=1

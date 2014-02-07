@@ -1,0 +1,26 @@
+1391623995599	Rename method 'create'
+1391624000941	Rename method 'createItent'
+1391625232727	Copy compilation unit
+1391625596815	Encapsulate field 'currentEvent'
+1391626162775	Move compilation unit
+1391626481171	Rename type 'EventUpdateServiceRunner'
+1391627266730	Convert local variable 'eventId' to field
+1391627315287	Extract method 'extracted'
+1391627425488	Encapsulate field 'listener'
+1391627643418	Extract method 'extracted'
+1391695944448	Delete element
+1391696049889	Extract method 'extracted'
+1391696276578	Delete element
+1391696283313	Rename type 'EventDataServiceRequestListener'
+1391702700892	Encapsulate field 'model'
+1391703049175	Convert local variable 'inflater' to field
+1391708444803	Rename method 'refreshData'
+1391716426526	Extract method 'extracted'
+1391720374311	Extract local variable 'size'
+1391722572172	Copy file
+1391722605114	Copy file
+1391722610610	Rename resource 'pitch_stand_selector.xml'
+1391722622275	Copy file
+1391722632071	Copy file
+1391722679768	Copy file
+1391727379002	Extract constant 'EVENT_SERVICE'

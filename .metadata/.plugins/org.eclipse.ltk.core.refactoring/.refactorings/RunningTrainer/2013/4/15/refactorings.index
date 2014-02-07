@@ -1,0 +1,109 @@
+1365445906735	Move compilation unit
+1365445925695	Rename package 'com.ForSee.example.model'
+1365445930005	Move compilation unit
+1365445943815	Move compilation unit
+1365445953525	Rename type 'SplashScreen'
+1365445981745	Rename type 'MyMapActivity'
+1365446852919	Rename field 'journeyPoints'
+1365446863739	Rename method 'getJourneyPoints'
+1365446871599	Rename method 'setJourneyPoints'
+1365446879089	Rename local variable 'journeyPoints'
+1365446891639	Rename method 'addJoureyPoint'
+1365446896669	Rename method 'addroutePoint'
+1365446903609	Rename local variable 'journeyPoint'
+1365446947959	Rename type 'MyOwnLocationOverlay'
+1365447524703	Extract constant 'ROUTE_COLOR'
+1365447548023	Extract constant 'ROUTE_WIDTH'
+1365447577073	Rename local variable 'journeyPoints'
+1365447597803	Rename local variable 'gPoint'
+1365447726873	Rename local variable 'path'
+1365447741863	Rename local variable 'gPoint'
+1365447750883	Rename local variable 'p1'
+1365447774453	Rename local variable 'p1'
+1365447778953	Rename local variable 'gPoint'
+1365447805163	Rename local variable 'route'
+1365447827633	Rename type 'RouteOverlay'
+1365447837743	Rename field 'journeyPaint'
+1365449183543	Rename type 'JourneyModel'
+1365449325489	Move compilation unit
+1365450248760	Rename field 'myLocationOverlay'
+1365452331218	Rename field 'apiKey'
+1365454380978	Extract constant 'MAP_VIEW_INDEX'
+1365455086135	Extract constant 'MY_ROUTE_OVERLAY_LOCATION'
+1365455254412	Extract constant 'MY_CURRENT_LOCATION_OVERLAY_LOCATION'
+1365460534560	Rename local variable 'stopMarkerItem'
+1365615591241	Rename field 'journeyModel'
+1365615599947	Rename local variable 'journeyModel'
+1365615645926	Rename field 'journeyModel'
+1365616671496	Move compilation unit
+1365616674434	Move compilation unit
+1365616768573	Rename package 'com.ForSee.example.activities'
+1365616772798	Delete element
+1365619176786	Rename method 'add'
+1365620700496	Extract method 'fillModel'
+1365622522551	Rename method 'setTime'
+1365622552467	Rename method 'calculateTime'
+1365622570759	Rename method 'setAverageVelocity'
+1365623531108	Rename field 'time'
+1365623695390	Extract method 'metersInKilometer'
+1365623738503	Extract constant 'METERS_IN_KILOMETER'
+1365625936125	Extract constant 'MILISECONDS_IN_HOUR'
+1365629148303	Rename local variable 'time'
+1365629164361	Rename local variable 'time'
+1365629177389	Rename field 'startTime'
+1365629902656	Rename field 'timeInSeconds'
+1365630188040	Extract local variable 'timeInHours'
+1365630481155	Extract local variable 'milisecondsInHour'
+1365632404630	Rename resource 'my_map_activity.xml'
+1365633061493	Rename type 'MainActivityActivity'
+1365633213205	Delete element
+1365642181947	Delete element
+1365699077411	Delete element
+1365699208919	Extract method 'updateRoutePoints'
+1365699687278	Rename method 'consume'
+1365699794648	Rename local variable 'timeInSeconds'
+1365700051605	Rename type 'TimeConstants'
+1365700061333	Rename type 'ConstantUtils'
+1365950591170	Rename resource 'map_rectangle.xml'
+1365950875981	Extract method 'getMapApiKey'
+1365951296922	Rename method 'createMap'
+1365954812759	Rename resource 'rectage_with_shadow.xml'
+1365955356966	Delete element
+1365958471448	Extract method 'initMap'
+1365958901946	Extract local variable 'backgroundColor'
+1365962489155	Delete element
+1365971320270	Rename resource 'history_activity.xml'
+1365971507782	Rename local variable 'lessons'
+1365971660168	Rename local variable 'lesson'
+1365971724949	Rename local variable 'lesson'
+1365973216686	Encapsulate field 'routeName'
+1365973435268	Rename method 'consumeFinnishedJourney'
+1365973455234	Rename method 'consumeInJourney'
+1365973503165	Rename field 'infoHandler'
+1365973586619	Rename type 'HistoryActivity'
+1365973703757	Rename field 'lessonHandler'
+1365974491880	Rename method 'getRoutes'
+1365975498960	Delete element
+1365976320198	Delete element
+1365976920725	Rename resource 'first_list_element_shape.xml'
+1365976927568	Rename resource 'last_list_element_shape.xml'
+1365976933067	Rename resource 'middle_list_element_shape.xml'
+1365977197090	Rename resource 'first_list_elemet_shape_pressed.xml'
+1365977224527	Copy file
+1365977244451	Copy file
+1365977277109	Copy file
+1365977291766	Copy file
+1365977455953	Rename field 'orange'
+1365979008511	Delete element
+1365979033952	Delete element
+1365979040009	Delete element
+1365980041158	Delete element
+1365980061070	Delete element
+1365980135765	Delete element
+1365980145294	Delete element
+1365980849677	Rename resource 'list_.xml'
+1365981864264	Copy file
+1365981874805	Delete element
+1365981886146	Copy file
+1365982420869	Rename resource 'list_border.xml'
+1365982709900	Delete element

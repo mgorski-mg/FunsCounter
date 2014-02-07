@@ -1,0 +1,101 @@
+package com.foursee.funscounter.fragment;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.support.v4.app.ListFragment;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ListView;
+import butterknife.ButterKnife;
+
+import com.foursee.funscounter.BaseApplication;
+import com.foursee.funscounter.R;
+import com.foursee.funscounter.adapter.EventListAdapter;
+import com.foursee.funscounter.model.Auth;
+import com.foursee.funscounter.model.Event;
+import com.foursee.funscounter.network.listeners.AllEventsRequestListener;
+import com.foursee.funscounter.network.rest.NetworkService;
+import com.foursee.funscounter.network.rest.request.AllEventsSpiceRequest;
+import com.octo.android.robospice.SpiceManager;
+
+public class EventListFragment extends ListFragment {
+
+	private final SpiceManager spiceManager = new SpiceManager(NetworkService.class);
+	private Auth auth;
+
+	private OnEventSelectedListener listener;
+
+	@Override
+	public void onAttach(Activity activity) {
+		super.onAttach(activity);
+		try {
+			listener = (OnEventSelectedListener) activity;
+		} catch (ClassCastException e) {
+			throw new ClassCastException("Activity must implement OnEventSelectedListener");
+		}
+	}
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		View view = inflater.inflate(R.layout.event_list_fragment, container, false);
+		ButterKnife.inject(this, view);
+		setHasOptionsMenu(true);
+		return view;
+	}
+
+	@Override
+	public void onActivityCreated(Bundle savedInstanceState) {
+		super.onActivityCreated(savedInstanceState);
+		spiceManager.start(getActivity());
+		auth = ((BaseApplication) getActivity().getApplication()).getAuth(); // TODO: inject auth
+		loadEvents();
+	}
+
+	@Override
+	public void onDestroyView() {
+		super.onDestroyView();
+		ButterKnife.reset(this);
+		spiceManager.shouldStop();
+	}
+
+	@Override
+	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+		super.onCreateOptionsMenu(menu, inflater);
+		getActivity().getMenuInflater().inflate(R.menu.event_list_menu, menu);
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		if(item.getItemId() == R.id.refresh_event_list) {
+			loadEvents();
+		}
+		return true;
+	}
+
+	private void loadEvents() {
+		spiceManager.execute(new AllEventsSpiceRequest(auth), new AllEventsRequestListener(this));
+	}
+
+	public void setEvents(Event.List events) {
+		EventListAdapter adapter = (EventListAdapter) getListAdapter();
+		if (adapter == null) {
+			setListAdapter(new EventListAdapter(getActivity(), events));
+		} else {
+			adapter.setEvents(events);
+			adapter.notifyDataSetChanged();
+		}
+	}
+
+	@Override
+	public void onListItemClick(ListView listView, View clickedView, int position, long id) {
+		listener.onEventSelected((int) id);
+	}
+
+	public static interface OnEventSelectedListener {
+		void onEventSelected(int eventId);
+	}
+}

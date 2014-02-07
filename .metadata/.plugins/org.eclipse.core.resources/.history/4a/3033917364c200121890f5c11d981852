@@ -1,0 +1,182 @@
+package com.ForSee.example;
+
+import android.os.Bundle;
+import android.widget.TextView;
+
+import com.ForSee.example.contracts.IObserver;
+import com.ForSee.example.database.DataBaseAdapter;
+import com.ForSee.example.maps.RoundedMapView;
+import com.ForSee.example.maps.calculators.BoundingBoxCalculator;
+import com.ForSee.example.models.BoundingBox;
+import com.ForSee.example.models.MyJourneyModel;
+import com.ForSee.example.utils.StringUtils;
+import com.ForSee.example.utils.TimeFormatter;
+import com.ForSee.example.views.TitleBar;
+import com.ForSee.example.R;
+import com.google.android.maps.GeoPoint;
+import com.google.android.maps.MapController;
+
+import roboguice.activity.RoboMapActivity;
+import roboguice.inject.InjectView;
+
+public class MyJourneyHistoryActivity extends RoboActivity implements IObserver<MyJourneyModel> {
+	public static final String JOURNEY_NAME_BUNDLE = "name";
+	private static final String NEW_LINE = StringUtils.NEW_LINE;
+	private TitleBar titleBar;
+
+	@InjectView(R.id.mapViewLayout)
+	private RoundedMapView roundedMapView;
+
+	@InjectView(R.id.timeText)
+	private TextView timeTextView;
+
+	@InjectView(R.id.distanceText)
+	private TextView distanceTextView;
+
+	@InjectView(R.id.tempoText)
+	private TextView tempoTextView;
+
+	@InjectView(R.id.caloriesText)
+	private TextView caloriesTextView;
+
+	@InjectView(R.id.currentVelocityText)
+	private TextView currentVelocityTextView;
+
+	@InjectView(R.id.averageVelocityText)
+	private TextView averageVelocityTextView;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		titleBar = new TitleBar(this);
+		String journeyName = getJourneyName();
+		titleBar.setTitle(journeyName);
+		titleBar.showTitleBar();
+
+		setContentView(R.layout.my_journey_map_activity);
+
+		MyJourneyModel myJourneyModel = new MyJourneyModel();
+		myJourneyModel.addListener(this);
+
+		roundedMapView.initHistoryMapView(myJourneyModel);
+
+		myJourneyModel.consume(loadJourney(journeyName));
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		currentVelocityTextView.setVisibility(TextView.GONE);
+	}
+
+	private String getJourneyName() {
+		Bundle extras = getIntent().getExtras();
+		if (extras != null) {
+			return extras.getString(JOURNEY_NAME_BUNDLE);
+		}
+		return StringUtils.EMPTY_STRING;
+	}
+
+	private MyJourneyModel loadJourney(String name) {
+		DataBaseAdapter dbAdapter = DataBaseAdapter.getInstace(getApplication());
+
+		dbAdapter.open();
+		MyJourneyModel journey = dbAdapter.getJourneyByName(name);
+		dbAdapter.close();
+
+		return journey;
+	}
+
+	@Override
+	public void onChange(MyJourneyModel model) {
+		// TODO Auto-generated method stub
+
+		updateTempo(model);
+		updateTimeText(model);
+		updateStartDate(model);
+
+		String distanceText = getString(R.string.distance);
+		distanceTextView.setText(distanceText + NEW_LINE + model.getDistance() + " km");
+
+		String caloriesText = getString(R.string.calories_burned);
+		caloriesTextView.setText(caloriesText + NEW_LINE + model.getCalories());
+
+		String currentVelocityText = getString(R.string.current_velocity);
+		currentVelocityTextView.setText(currentVelocityText + NEW_LINE + model.getCurrentVelocity() + " km/h");
+
+		String averageVelocityText = getString(R.string.average_velocity);
+		averageVelocityTextView.setText(averageVelocityText + NEW_LINE + model.getAverageVelocity() + " km/h");
+
+		updateMapPositionAndZoom(model);
+	}
+
+	private void updateMapPositionAndZoom(MyJourneyModel model) {
+		MapController mapController = roundedMapView.getMyMapView().getController();
+
+		BoundingBox boundingBox = BoundingBoxCalculator.boundingBoxFromGeoPoints(model.getRoutePoints());
+
+		GeoPoint mapCenter = BoundingBoxCalculator.getCenter(boundingBox);
+		int expectedLatSpanE6 = BoundingBoxCalculator.getLatSpanE6(boundingBox);
+		int expectedLonSpanE6 = BoundingBoxCalculator.getLonSpanE6(boundingBox);
+
+		mapController.setCenter(mapCenter);
+		mapController.zoomToSpan(expectedLatSpanE6, expectedLonSpanE6);
+
+		checkIfZoomIsValid(expectedLatSpanE6, expectedLonSpanE6);
+	}
+
+	private void checkIfZoomIsValid(final int expectedLatSpanE6, final int expectedLonSpanE6) { // Issue with not ready map
+		roundedMapView.getMyMapView().postDelayed(new Runnable() {
+			public void run() {
+				int mapLatSpanE6 = roundedMapView.getMyMapView().getLatitudeSpan();
+				int mapLonSpanE6 = roundedMapView.getMyMapView().getLongitudeSpan();
+
+				while (expectedLatSpanE6 > mapLatSpanE6 || expectedLonSpanE6 > mapLonSpanE6) {
+					if (mapLatSpanE6 == 0 || mapLonSpanE6 == 360000000) {
+						roundedMapView.getMyMapView().postDelayed(this, 100);
+					} else {
+						roundedMapView.getMyMapView().getController().zoomOut();
+						mapLatSpanE6 = roundedMapView.getMyMapView().getLatitudeSpan();
+						mapLonSpanE6 = roundedMapView.getMyMapView().getLongitudeSpan();
+					}
+				}
+			}
+		}, 100);
+	}
+
+	private void updateTempo(MyJourneyModel model) {
+		String format = getString(R.string.minutes_and_seconds_format);
+		String tempo = TimeFormatter.formatTime((long) model.getTempo(), format);
+
+		String tempoText = getString(R.string.tempo);
+		String tempoString = tempoText + NEW_LINE + tempo + " min/km";
+
+		tempoTextView.setText(tempoString);
+	}
+
+	private void updateTimeText(MyJourneyModel model) {
+		String format = getString(R.string.hours_minutes_and_seconds_format);
+		String time = TimeFormatter.formatTime(model.getTime(), format);
+
+		String timeText = getString(R.string.time);
+		String timeString = timeText + NEW_LINE + time;
+
+		timeTextView.setText(timeString);
+	}
+
+	private void updateStartDate(MyJourneyModel model) {
+		String format = getString(R.string.full_date_format);
+		String startDate = TimeFormatter.formatDate(model.getStartTime(), format);
+
+		titleBar.setDate(startDate);
+		// setTitle(getTitle() + " - " + startDate);
+		// TODO - titlebar
+	}
+
+	@Override
+	protected boolean isRouteDisplayed() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+}

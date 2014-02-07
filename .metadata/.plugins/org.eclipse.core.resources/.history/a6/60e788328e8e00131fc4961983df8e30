@@ -1,0 +1,55 @@
+package com.foursee.funscounter.activity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.widget.TextView;
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+import butterknife.OnClick;
+
+import com.foursee.funscounter.R;
+import com.foursee.funscounter.model.Auth;
+import com.foursee.funscounter.network.rest.NetworkService;
+import com.octo.android.robospice.SpiceManager;
+
+public class SplashActivity extends ActionBarActivity {
+
+	@InjectView(R.id.miau)
+	TextView miau;
+
+	private final SpiceManager spiceManager = new SpiceManager(NetworkService.class);
+
+	private Auth auth;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.splash_activity);
+
+		startActivity(new Intent(this, LoginActivity.class));
+	}
+
+	@Override
+	protected void onStart() {
+		super.onStart();
+		spiceManager.start(this);
+	}
+
+	@Override
+	protected void onStop() {
+		super.onStop();
+		spiceManager.shouldStop();
+	}
+
+	@OnClick(R.id.doMiau)
+	void getEvents() {
+		// spiceManager.execute(new AllEventsSpiceRequest(auth), new AllEventsRequestListener(this));
+		startActivity(new Intent(this, EventsActivity.class));
+	}
+
+	@OnClick(R.id.doMiau2)
+	void getEventData() {
+		// spiceManager.execute(new EventDataSpiceRequest(auth, 2), new EventDataRequestListener(this));
+	}
+}

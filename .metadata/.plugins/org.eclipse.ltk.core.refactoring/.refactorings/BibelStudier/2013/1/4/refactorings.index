@@ -1,0 +1,28 @@
+1358758738564	Rename method 'lockLessonButtons2'
+1358760864726	Copy file
+1358760923083	Rename resource 'Copy of activity_lessonslist_item_gray.xml'
+1358763540305	Delete element
+1358764296524	Rename field 'baseResource'
+1358767628541	Delete element
+1358770421566	Rename method 'lockLessonButtons'
+1358775953823	Rename method 'checkIfFirstLessonIsEnabled'
+1358775957514	Rename method 'enableLesson'
+1358776489422	Rename method 'getIsCorrect'
+1358776495731	Rename method 'getIsChecked'
+1358776502710	Rename method 'setIsCorrect'
+1358776509052	Rename method 'setIsChecked'
+1358778363814	Rename method 'isChecked'
+1358778371836	Rename method 'isCorrect'
+1358809794241	Rename method 'displayResult'
+1358809876055	Extract method 'addLessonsToApplicationObject'
+1358809973537	Rename method 'createLessonsList'
+1358810087065	Extract constant 'LESSON_NAME_EXTRA'
+1358810919050	Extract constant 'READ_MORE_EXTRA'
+1358811352145	Rename field 'topicNumber'
+1359114892608	Extract constant 'LESSONS_TYPE_NAME_EXTRA'
+1359118688684	Delete element
+1359118692747	Delete element
+1359118703513	Delete element
+1359118706222	Delete element
+1359118721210	Rename type 'AngelsActivity'
+1359118815312	Rename type 'LessonListActivity'

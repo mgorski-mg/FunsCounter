@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:funscounter="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/refresh_event_list"
+        android:icon="@drawable/ic_action_refresh"
+        android:title="@string/refresh_event_list"
+        funscounter:showAsAction="always"/>
+
+</menu>

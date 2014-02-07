@@ -1,0 +1,18 @@
+package com.foursee.funscounter;
+
+import android.app.Application;
+
+import com.foursee.funscounter.model.Auth;
+
+public class BaseApplication extends Application {
+	private Auth auth;
+	private Event currentEvent;
+
+	public Auth getAuth() {
+		return auth;
+	}
+
+	public void setAuth(Auth auth) {
+		this.auth = auth;
+	}
+}

@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:weightSum="@dimen/weight_sum_to_one"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <!-- Choose topic layout -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/zero_dimen"
+        android:layout_weight="@dimen/weight_four_tenths"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/choose_topic_icon"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/icon_bottom_marigin"
+                android:layout_marginTop="@dimen/icon_top_marigin"
+                android:contentDescription="@string/app_name"
+                android:paddingTop="@dimen/main_choose_topic_icon_paddig_top"
+                android:src="@drawable/choose_topic" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/choose_topic_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@layout/bibelstudier_layout_bright"
+            android:padding="@dimen/main_choose_topic_text_paddig_top"
+            android:text="@string/main_choose_topic_text"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <!-- Main menu -->
+
+    <Button
+        android:id="@+id/OldTestamentButton"
+        style="@style/menuAndListButton"
+        android:layout_height="@dimen/zero_dimen"
+        android:layout_weight="@dimen/weight_one_tenth"
+        android:text="@string/main_menu_oldTestament" />
+
+    <Button
+        android:id="@+id/AngelsButton"
+        style="@style/menuAndListButton"
+        android:layout_height="@dimen/zero_dimen"
+        android:layout_weight="@dimen/weight_one_tenth"
+        android:text="@string/main_menu_angels" />
+
+    <Button
+        android:id="@+id/JesusButton"
+        style="@style/menuAndListButton"
+        android:layout_height="@dimen/zero_dimen"
+        android:layout_weight="@dimen/weight_one_tenth"
+        android:text="@string/main_menu_jesus" />
+
+    <Button
+        android:id="@+id/NextItemButton"
+        style="@style/menuAndListButton"
+        android:layout_height="@dimen/zero_dimen"
+        android:layout_weight="@dimen/weight_one_tenth"
+        android:text="@string/main_menu_nextItem" />
+
+    <LinearLayout
+        android:id="@+id/main_footer_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/zero_dimen"
+        android:layout_weight="@dimen/weight_two_tenths" >
+    </LinearLayout>
+
+</LinearLayout>

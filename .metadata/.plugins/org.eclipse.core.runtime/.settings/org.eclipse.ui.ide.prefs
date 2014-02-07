@@ -1,0 +1,10 @@
+EXIT_PROMPT_ON_CLOSE_LAST_WINDOW=false
+LIMIT_PROBLEMS=false
+OPEN_REQUIRED_PROJECTS=always
+PROBLEMS_FILTERS=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<filters>\r\n<filter IMemento.internal.id\="Default" contains\="true" description\="" enabled\="true" onResource\="0" selectBySeverity\="false" selectionStatus\="org.eclipse.core.resources.problemmarker\:true\:org.eclipse.jdt.launching.jreContainerMarker\:true\:org.eclipse.ant.ui.buildFileProblem\:true\:org.eclipse.jdt.core.problem\:true\:org.eclipse.emf.ecore.diagnostic\:true\:com.csc.dip.projectset.PsfMarker\:true\:com.csc.dip.projectset.PsfNotLoadedMarker\:true\:com.csc.dip.projectset.PsfErrorMarker\:true\:com.csc.dip.projectset.PsfNotLoadedToPreferredMarker\:true\:com.csc.dip.projectset.PsfPathConflictMarker\:true\:com.csc.dip.projectset.PsfTagConflictMarker\:true\:org.eclipse.xsd.diagnostic\:true\:org.eclipse.pde.validation-marker\:true\:org.eclipse.wst.validation.problemmarker\:true\:org.eclipse.jst.j2ee.EARValidatorMarker\:true\:org.eclipse.jst.j2ee.ejb.EJBValidatorMarker\:true\:org.eclipse.wst.wsdl.validation.validationMarker\:true\:org.eclipse.jdt.core.buildpath_problem\:true\:org.eclipse.jdt.apt.core.buildproblem\:true\:org.eclipse.jdt.apt.core.configproblem\:true\:org.eclipse.wst.common.project.facet.core.validation.marker\:true\:org.eclipse.jst.common.frameworks.javaVersionMismatch\:true\:org.eclipse.jst.j2ee.differentRuntimesDetected\:true\:org.eclipse.jdt.apt.core.compile.problem\:true\:" severity\="4"/>\r\n</filters>
+PROBLEMS_FILTERS_MIGRATE=true
+TASKS_FILTERS_MIGRATE=true
+eclipse.preferences.version=1
+platformState=1372184393183
+quickStart=false
+tipsAndTricks=true

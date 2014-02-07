@@ -1,0 +1,30 @@
+1367607252309	Rename resource 'history_tab_backgroung.xml'
+1367611925033	Rename resource 'history_tab_background.xml'
+1367614390167	Rename resource 'tap_divider.xml'
+1367616845695	Delete element
+1367618070177	Move file
+1367618128612	Move file
+1367618131022	Delete element
+1367618843031	Move file
+1367623841333	Delete element
+1367624164041	Delete element
+1367624176459	Delete element
+1367624183852	Delete element
+1367624194014	Delete elements
+1367699124721	Rename field 'threshold'
+1367699963878	Delete element
+1367712853001	Extract local variable 'fontMetrics'
+1367715959606	Delete element
+1367717176419	Delete element
+1367717236352	Rename field 'timeTextView'
+1367756379770	Extract local variable 'caloriesText'
+1367756417106	Extract local variable 'distanceText'
+1367756454464	Extract local variable 'currentVelocityText'
+1367756492347	Extract local variable 'avarageVelocityText'
+1367756553774	Extract local variable 'tempoText'
+1367756785546	Extract constant 'NEW_LINE'
+1367757564315	Delete element
+1367758229943	Extract method 'updateStartDate'
+1367769096928	Rename field 'listColumns'
+1367769290805	Rename method 'getAllJoureys'
+1367770082402	Extract local variable 'size'

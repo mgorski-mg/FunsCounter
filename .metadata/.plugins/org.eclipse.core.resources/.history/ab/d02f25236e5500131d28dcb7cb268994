@@ -1,0 +1,170 @@
+package com.example.batterytest;
+
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.Service;
+import android.content.Intent;
+import android.os.BatteryManager;
+import android.os.Binder;
+import android.os.Environment;
+import android.os.IBinder;
+import android.support.v4.app.NotificationCompat;
+import android.util.Log;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class BackgroundBatteryService extends Service {
+	private NotificationManager mNM;
+	private BufferedWriter bwriter;
+	// private Intent batteryStatus;
+	int id = 0;
+	PendingIntent mPendingIntent;
+
+	// private JsonStopBoardWebService stopBoardService;
+	private final IBinder mBinder = new LocalBinder();
+
+	public class LocalBinder extends Binder {
+		BackgroundBatteryService getService() {
+			return BackgroundBatteryService.this;
+		}
+	}
+
+	@Override
+	public void onCreate() {
+		File file = createFile();
+		try {
+			bwriter = new BufferedWriter(new FileWriter(file));
+		} catch (IOException e) {
+			Log.v("Test", e.getMessage());
+		}
+		// IntentFilter ifilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+		// batteryStatus = getApplicationContext().registerReceiver(null, ifilter);
+		// Intent mIntent = new Intent(getApplicationContext(), MainActivity.class);
+		// mPendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, mIntent, 0);
+
+		// stopBoardService = new JsonStopBoardWebService(getApplicationContext().getResources());
+		mNM = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+	}
+
+	@Override
+	public int onStartCommand(Intent intent, int flags, int startId) {
+		// IntentFilter ifilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+		// Intent batteryStatus = getApplicationContext().registerReceiver(null, ifilter);
+
+		// File file = createFile();
+		// BufferedWriter bwriter = null;
+
+		try {
+			// bwriter = new BufferedWriter(new FileWriter(file));
+			bwriter.write("Start");
+			bwriter.newLine();
+		} catch (FileNotFoundException e) {
+			Log.v("Test", e.getMessage());
+		} catch (IOException e) {
+			Log.v("Test", e.getMessage());
+		}
+
+		// int id = 0;
+		int level = 58;
+		while (level >= 54) {
+			level --;//= batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
+			showNotification("Level: " + level, id++);
+			// try {
+			// new StopBoardFetchTask(getApplicationContext()).call();
+			// } catch (ServiceException e) {
+			// Log.v("Test", e.getMessage());
+			// }
+
+			try {
+				// bwriter.write(("Time:\t" + new Date().toString() + "\nBattery level:\t" + level));
+				bwriter.write(level + " ");
+				// bwriter.newLine();
+				Log.v("Test", "" + level);
+			} catch (IOException e) {
+				Log.v("Test", e.getMessage());
+			}
+
+			try {
+				Thread.sleep(1000 * 10);
+			} catch (InterruptedException e) {
+				Log.v("Test", e.getMessage());
+			}
+		}
+
+		showNotification("PreSave File - Battery Test", id++);
+		try {
+			showNotification("Save File0 - Battery Test", id++);
+			bwriter.write("Stop");
+			showNotification("Save File1 - Battery Test", id++);
+			bwriter.close();
+			showNotification("Save File2 - Battery Test", id++);
+		} catch (IOException e) {
+			Log.v("Test", e.getMessage());
+		}
+
+		showNotification("Stop Battery Test", id++);
+
+		return START_STICKY;
+	}
+
+	private File createFile() {
+		String root = Environment.getExternalStorageDirectory().toString();
+		File myDir = new File(root + "/battery_log");
+		myDir.mkdirs();
+
+		String fname = "Battery_log" + ".txt";
+		File file = new File(myDir, fname);
+		if (file.exists()) {
+			file.delete();
+		}
+		return file;
+	}
+
+	private void showNotification(String message, int id) {
+		// Intent mIntent = new Intent(getApplicationContext(), MainActivity.class);
+		// PendingIntent mPendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, mIntent, 0);
+
+		Notification notification = new NotificationCompat.Builder(getApplicationContext()) //
+				.setContentTitle(message) //
+				.setContentText(message) //
+				.setSmallIcon(R.drawable.ic_launcher) //
+				.setContentIntent(mPendingIntent) //
+				.build();
+		notification.flags |= Notification.FLAG_AUTO_CANCEL;
+
+		mNM.notify(id, notification);
+	}
+
+	@Override
+	public void onDestroy() {
+		mNM.cancel(1);
+		stopSelf();
+	}
+
+	@Override
+	public IBinder onBind(Intent intent) {
+		return mBinder;
+	}
+
+	// private class StopBoardFetchTask extends RoboAsyncTask<Void> {
+	// public StopBoardFetchTask(Context context) {
+	// super(context);
+	// }
+	//
+	// public Void call() throws ServiceException {
+	// StopBoard stopBoard = stopBoardService.getStopBoard(StopPoint.newBuilder().withAtcoCode("609088").withStopName("Test").build());
+	// Log.v("Test", stopBoard.toString());
+	// return null;
+	// }
+	//
+	// @Override
+	// protected void onSuccess(Void stopBoard) throws Exception {
+	// super.onSuccess(stopBoard);
+	// }
+	// }
+}

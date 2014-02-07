@@ -1,0 +1,28 @@
+// Generated code from Butter Knife. Do not modify!
+package com.foursee.funscounter.ui.view;
+
+import android.view.View;
+import butterknife.ButterKnife.Finder;
+
+public class StadiumView$$ViewInjector {
+  public static void inject(Finder finder, final com.foursee.funscounter.ui.view.StadiumView target, Object source) {
+    View view;
+    view = finder.findById(source, 0);
+    if (view == null) {
+      throw new IllegalStateException("Required view with id '0' for field 'northStand', field 'funs', field 'stand', field 'teams', and field 'date' was not found. If this view is optional add '@Optional' annotation.");
+    }
+    target.northStand = (android.widget.ImageView) view;
+    target.funs = (android.widget.TextView) view;
+    target.stand = (android.widget.TextView) view;
+    target.teams = (android.widget.TextView) view;
+    target.date = (android.widget.TextView) view;
+  }
+
+  public static void reset(com.foursee.funscounter.ui.view.StadiumView target) {
+    target.northStand = null;
+    target.funs = null;
+    target.stand = null;
+    target.teams = null;
+    target.date = null;
+  }
+}

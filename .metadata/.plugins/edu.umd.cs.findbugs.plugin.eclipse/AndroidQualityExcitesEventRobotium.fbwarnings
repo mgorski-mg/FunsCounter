@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2" sequence="1" timestamp="1373724483455" analysisTimestamp="1373724481942" release="">
+  <Project projectName="AndroidQualityExcitesEventRobotium">
+    <Jar>D:\dev\Android\Workshops\QE\android-robotium-workshop-qee\AndroidQualityExcitesEventRobotium\bin\classes</Jar>
+    <AuxClasspathEntry>D:\dev\Android\Workshops\QE\android-robotium-workshop-qee\AndroidQualityExcitesEventRobotium\bin\classes</AuxClasspathEntry>
+    <AuxClasspathEntry>D:\dev\Android\Workshops\QE\android-robotium-workshop-qee\AndroidQualityExcitesEventRobotium\libs\robotium-solo-4.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>D:\dev\Android\Workshops\QE\android-robotium-workshop-qee\AndroidQualityExcitesEvent\bin\classes</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Zlatan\Desktop\AndroidEclipse\sdk\tools\support\annotations.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Zlatan\Desktop\AndroidEclipse\sdk\platforms\android-15\android.jar</AuxClasspathEntry>
+    <SrcDir>D:\dev\Android\Workshops\QE\android-robotium-workshop-qee\AndroidQualityExcitesEventRobotium\gen</SrcDir>
+    <SrcDir>D:\dev\Android\Workshops\QE\android-robotium-workshop-qee\AndroidQualityExcitesEventRobotium\src</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE" first="1">
+    <Class classname="pl.fp.mmotak.qualityexcites.settings.Settings">
+      <SourceLine classname="pl.fp.mmotak.qualityexcites.settings.Settings" sourcefile="Settings.java" sourcepath="pl/fp/mmotak/qualityexcites/settings/Settings.java"/>
+    </Class>
+    <Field classname="pl.fp.mmotak.qualityexcites.settings.Settings" name="SEC_1" signature="I" isStatic="true">
+      <SourceLine classname="pl.fp.mmotak.qualityexcites.settings.Settings" sourcefile="Settings.java" sourcepath="pl/fp/mmotak/qualityexcites/settings/Settings.java"/>
+    </Field>
+    <SourceLine classname="pl.fp.mmotak.qualityexcites.settings.Settings" start="4" end="4" startBytecode="3" endBytecode="3" sourcefile="Settings.java" sourcepath="pl/fp/mmotak/qualityexcites/settings/Settings.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE" first="1">
+    <Class classname="pl.fp.mmotak.qualityexcites.settings.Settings">
+      <SourceLine classname="pl.fp.mmotak.qualityexcites.settings.Settings" sourcefile="Settings.java" sourcepath="pl/fp/mmotak/qualityexcites/settings/Settings.java"/>
+    </Class>
+    <Field classname="pl.fp.mmotak.qualityexcites.settings.Settings" name="SEC_2" signature="I" isStatic="true">
+      <SourceLine classname="pl.fp.mmotak.qualityexcites.settings.Settings" sourcefile="Settings.java" sourcepath="pl/fp/mmotak/qualityexcites/settings/Settings.java"/>
+    </Field>
+    <SourceLine classname="pl.fp.mmotak.qualityexcites.settings.Settings" start="5" end="5" startBytecode="9" endBytecode="9" sourcefile="Settings.java" sourcepath="pl/fp/mmotak/qualityexcites/settings/Settings.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE" first="1">
+    <Class classname="pl.fp.mmotak.qualityexcites.settings.Settings">
+      <SourceLine classname="pl.fp.mmotak.qualityexcites.settings.Settings" sourcefile="Settings.java" sourcepath="pl/fp/mmotak/qualityexcites/settings/Settings.java"/>
+    </Class>
+    <Field classname="pl.fp.mmotak.qualityexcites.settings.Settings" name="SEC_3" signature="I" isStatic="true">
+      <SourceLine classname="pl.fp.mmotak.qualityexcites.settings.Settings" sourcefile="Settings.java" sourcepath="pl/fp/mmotak/qualityexcites/settings/Settings.java"/>
+    </Field>
+    <SourceLine classname="pl.fp.mmotak.qualityexcites.settings.Settings" start="6" end="6" startBytecode="15" endBytecode="15" sourcefile="Settings.java" sourcepath="pl/fp/mmotak/qualityexcites/settings/Settings.java"/>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="pl.fp.mmotak.qualityexcites.test.R$attr">
+      <SourceLine classname="pl.fp.mmotak.qualityexcites.test.R$attr" start="11" end="11" sourcefile="R.java" sourcepath="pl/fp/mmotak/qualityexcites/test/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="pl.fp.mmotak.qualityexcites.test.R$drawable">
+      <SourceLine classname="pl.fp.mmotak.qualityexcites.test.R$drawable" start="13" end="13" sourcefile="R.java" sourcepath="pl/fp/mmotak/qualityexcites/test/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="pl.fp.mmotak.qualityexcites.test.R$string">
+      <SourceLine classname="pl.fp.mmotak.qualityexcites.test.R$string" start="16" end="16" sourcefile="R.java" sourcepath="pl/fp/mmotak/qualityexcites/test/R.java"/>
+    </Class>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Sat, 13 Jul 2013 16:05:00 +0200" total_classes="11" referenced_classes="55" total_bugs="6" total_size="335" num_packages="3" vm_version="23.25-b01" cpu_seconds="1.50" clock_seconds="1.52" peak_mbytes="341.16" alloc_mbytes="742.44" gc_seconds="0.04" priority_2="3" priority_1="3">
+    <PackageStats package="pl.fp.mmotak.qualityexcites.calculator.test" total_bugs="0" total_types="1" total_size="123">
+      <ClassStats class="pl.fp.mmotak.qualityexcites.calculator.test.CalculatorActivityTest" sourceFile="CalculatorActivityTest.java" interface="false" size="123" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="pl.fp.mmotak.qualityexcites.settings" total_bugs="3" total_types="1" total_size="10" priority_1="3">
+      <ClassStats class="pl.fp.mmotak.qualityexcites.settings.Settings" sourceFile="Settings.java" interface="false" size="10" bugs="3" priority_1="3"/>
+    </PackageStats>
+    <PackageStats package="pl.fp.mmotak.qualityexcites.test" total_bugs="3" total_types="9" total_size="202" priority_2="3">
+      <ClassStats class="pl.fp.mmotak.qualityexcites.test.BuildConfig" sourceFile="BuildConfig.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="pl.fp.mmotak.qualityexcites.test.MenuListActivityTests" sourceFile="MenuListActivityTests.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="pl.fp.mmotak.qualityexcites.test.PalindromsActivityTests" sourceFile="PalindromsActivityTests.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="pl.fp.mmotak.qualityexcites.test.R" sourceFile="R.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="pl.fp.mmotak.qualityexcites.test.R$attr" sourceFile="R.java" interface="false" size="3" bugs="1" priority_2="1"/>
+      <ClassStats class="pl.fp.mmotak.qualityexcites.test.R$drawable" sourceFile="R.java" interface="false" size="4" bugs="1" priority_2="1"/>
+      <ClassStats class="pl.fp.mmotak.qualityexcites.test.R$string" sourceFile="R.java" interface="false" size="4" bugs="1" priority_2="1"/>
+      <ClassStats class="pl.fp.mmotak.qualityexcites.test.RandomMenusTest" sourceFile="RandomMenusTest.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="pl.fp.mmotak.qualityexcites.test.SplashActivityTest" sourceFile="SplashActivityTest.java" interface="false" size="42" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="717" invocations="460" avgMicrosecondsPerInvocation="1559" maxMicrosecondsPerInvocation="2705" standardDeviationMircosecondsPerInvocation="359"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="159" invocations="2" avgMicrosecondsPerInvocation="79954" maxMicrosecondsPerInvocation="140623" standardDeviationMircosecondsPerInvocation="60669"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="112" invocations="449" avgMicrosecondsPerInvocation="249" maxMicrosecondsPerInvocation="11298" standardDeviationMircosecondsPerInvocation="637"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="60" invocations="55" avgMicrosecondsPerInvocation="1095" maxMicrosecondsPerInvocation="41944" standardDeviationMircosecondsPerInvocation="5591"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="23" invocations="50" avgMicrosecondsPerInvocation="467" maxMicrosecondsPerInvocation="3538" standardDeviationMircosecondsPerInvocation="551"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="22" invocations="50" avgMicrosecondsPerInvocation="451" maxMicrosecondsPerInvocation="2263" standardDeviationMircosecondsPerInvocation="417"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="21" invocations="50" avgMicrosecondsPerInvocation="426" maxMicrosecondsPerInvocation="3834" standardDeviationMircosecondsPerInvocation="577"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="17" invocations="55" avgMicrosecondsPerInvocation="315" maxMicrosecondsPerInvocation="8210" standardDeviationMircosecondsPerInvocation="1130"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1373724483455" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>

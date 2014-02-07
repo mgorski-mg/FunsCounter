@@ -1,0 +1,88 @@
+package com.foursee.funscounter.model;
+
+import java.util.ArrayList;
+import java.util.Date;
+
+public class Event {
+	private int id;
+	private String type;
+	private String description;
+	private Date date;
+	private Gate.List gates;
+
+	// @SuppressWarnings("serial")
+	// private final ArrayList<OnEventChangeListener> listeners = new ArrayList<OnEventChangeListener>();
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+		notifyListeners();
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+		notifyListeners();
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+		notifyListeners();
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+		notifyListeners();
+	}
+
+	public Gate.List getGates() {
+		return gates;
+	}
+
+	public void setGates(Gate.List gates) {
+		this.gates = gates;
+		notifyListeners();
+	}
+
+	// public void refreshData(Event event) {
+	// gates = event.getGates();
+	// notifyListeners();
+	// }
+
+//	private void notifyListeners() {
+//		 for (OnEventChangeListener listener : listeners) {
+//		 listener.onEventChange();
+//		 }
+//	}
+
+	// public void registerListener(OnEventChangeListener listener) {
+	// listeners.add(listener);
+	// }
+	//
+	// public void unregisterListener(OnEventChangeListener listener) {
+	// listeners.remove(listener);
+	// }
+
+	@SuppressWarnings("serial")
+	public static class List extends ArrayList<Event> {
+	}
+
+	// @SuppressWarnings("serial")
+	// public interface OnEventChangeListener {
+	// void onEventChange();
+	// }
+}

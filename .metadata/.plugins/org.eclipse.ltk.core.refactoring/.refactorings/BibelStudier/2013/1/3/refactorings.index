@@ -1,0 +1,29 @@
+1358160822870	Move file
+1358160971400	Move file
+1358161002608	Delete element
+1358163603250	Rename local variable 'answerNumber'
+1358168854068	Extract method 'findRadioButtonIndex'
+1358241365279	Rename field 'question'
+1358241377191	Rename field 'headText'
+1358243440674	Rename package 'application'
+1358246159868	Rename method 'setLessonsName'
+1358322997619	Rename method 'loadLessonsToApplicationObject'
+1358323274149	Rename local variable 'buttonView'
+1358323355180	Rename method 'setLessonsNameOnButtons'
+1358329973995	Delete element
+1358333414482	Rename resource 'activity_angels.xml'
+1358333421479	Rename resource 'activity_angels2.xml'
+1358334199929	Rename resource 'activity_angels_item.xml'
+1358334210417	Rename resource 'activity_angels.xml'
+1358334318370	Rename resource 'activity_lessonList_item.xml'
+1358334323113	Rename resource 'activity_lessonList.xml'
+1358334654479	Rename resource 'activity_lessonsList_item.xml'
+1358334659958	Rename resource 'activity_lessonsList.xml'
+1358334855761	Rename method 'createLessonButtons'
+1358339959588	Delete element
+1358340467635	Rename local variable 'items'
+1358501014007	Rename local variable 'layout'
+1358502709820	Delete element
+1358505123317	Delete element
+1358505143562	Rename resource 'bibelstudier_menu_button.xml'
+1358505968866	Rename resource 'bibelstudier_menuAndAdd_button.xml'

@@ -1,0 +1,17 @@
+package com.example.androidmapsv2;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+import com.google.android.gms.maps.MapsInitializer;
+
+public class MainActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		MapsInitializer.initialize(context);
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+	}
+
+}

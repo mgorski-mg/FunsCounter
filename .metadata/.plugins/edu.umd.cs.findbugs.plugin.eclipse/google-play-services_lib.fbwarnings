@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.2" sequence="1" timestamp="1373998081668" analysisTimestamp="1373998077356" release="">
+  <Project projectName="google-play-services_lib">
+    <Jar>D:\dev\Android\4See\google-play-services_lib\bin\classes</Jar>
+    <AuxClasspathEntry>D:\dev\Android\4See\google-play-services_lib\libs\google-play-services.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>D:\dev\Android\4See\google-play-services_lib\bin\classes</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Zlatan\Desktop\AndroidEclipse\sdk\tools\support\annotations.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Zlatan\Desktop\AndroidEclipse\sdk\platforms\android-8\android.jar</AuxClasspathEntry>
+    <SrcDir>D:\dev\Android\4See\google-play-services_lib\gen</SrcDir>
+    <SrcDir>D:\dev\Android\4See\google-play-services_lib\src</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="com.google.android.gms.R$attr">
+      <SourceLine classname="com.google.android.gms.R$attr" start="11" end="129" sourcefile="R.java" sourcepath="com/google/android/gms/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="com.google.android.gms.R$color">
+      <SourceLine classname="com.google.android.gms.R$color" start="131" end="145" sourcefile="R.java" sourcepath="com/google/android/gms/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="com.google.android.gms.R$drawable">
+      <SourceLine classname="com.google.android.gms.R$drawable" start="147" end="171" sourcefile="R.java" sourcepath="com/google/android/gms/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="com.google.android.gms.R$id">
+      <SourceLine classname="com.google.android.gms.R$id" start="173" end="178" sourcefile="R.java" sourcepath="com/google/android/gms/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="com.google.android.gms.R$string">
+      <SourceLine classname="com.google.android.gms.R$string" start="180" end="255" sourcefile="R.java" sourcepath="com/google/android/gms/R.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" abbrev="Nm" category="BAD_PRACTICE" first="1">
+    <Class classname="com.google.android.gms.R$styleable">
+      <SourceLine classname="com.google.android.gms.R$styleable" start="257" end="501" sourcefile="R.java" sourcepath="com/google/android/gms/R.java"/>
+    </Class>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Sat, 13 Jul 2013 16:22:18 +0200" total_classes="9" referenced_classes="14" total_bugs="6" total_size="207" num_packages="2" vm_version="23.25-b01" cpu_seconds="2.61" clock_seconds="4.32" peak_mbytes="183.64" alloc_mbytes="742.44" gc_seconds="0.42" priority_2="6">
+    <PackageStats package="android" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="android.UnusedStub" sourceFile="UnusedStub.java" interface="false" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.google.android.gms" total_bugs="6" total_types="8" total_size="204" priority_2="6">
+      <ClassStats class="com.google.android.gms.BuildConfig" sourceFile="BuildConfig.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="com.google.android.gms.R" sourceFile="R.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="com.google.android.gms.R$attr" sourceFile="R.java" interface="false" size="32" bugs="1" priority_2="1"/>
+      <ClassStats class="com.google.android.gms.R$color" sourceFile="R.java" interface="false" size="28" bugs="1" priority_2="1"/>
+      <ClassStats class="com.google.android.gms.R$drawable" sourceFile="R.java" interface="false" size="52" bugs="1" priority_2="1"/>
+      <ClassStats class="com.google.android.gms.R$id" sourceFile="R.java" interface="false" size="14" bugs="1" priority_2="1"/>
+      <ClassStats class="com.google.android.gms.R$string" sourceFile="R.java" interface="false" size="46" bugs="1" priority_2="1"/>
+      <ClassStats class="com.google.android.gms.R$styleable" sourceFile="R.java" interface="false" size="25" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="2432" invocations="2" avgMicrosecondsPerInvocation="1216161" maxMicrosecondsPerInvocation="1718758" standardDeviationMircosecondsPerInvocation="502597"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="398" invocations="9" avgMicrosecondsPerInvocation="44228" maxMicrosecondsPerInvocation="396458" standardDeviationMircosecondsPerInvocation="124532"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="171" invocations="188" avgMicrosecondsPerInvocation="911" maxMicrosecondsPerInvocation="48491" standardDeviationMircosecondsPerInvocation="4598"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="154" invocations="191" avgMicrosecondsPerInvocation="808" maxMicrosecondsPerInvocation="1336" standardDeviationMircosecondsPerInvocation="244"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1373998081658" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>

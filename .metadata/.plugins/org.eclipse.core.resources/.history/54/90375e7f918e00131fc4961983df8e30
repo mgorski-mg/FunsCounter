@@ -1,0 +1,33 @@
+package com.foursee.funscounter.network.listeners;
+
+import android.widget.Toast;
+
+import com.foursee.funscounter.R;
+import com.foursee.funscounter.fragment.ContentFragment;
+import com.foursee.funscounter.model.Event;
+import com.foursee.funscounter.ui.dialog.LoadingDialog;
+import com.octo.android.robospice.persistence.exception.SpiceException;
+import com.octo.android.robospice.request.listener.RequestListener;
+
+public class EventDataRequestListener implements RequestListener<Event> {
+	private final ContentFragment fragment;
+	private final LoadingDialog dialog;
+
+	public EventDataRequestListener(ContentFragment fragment) {
+		this.fragment = fragment;
+		dialog = new LoadingDialog(fragment.getActivity(), R.string.wait);
+		fragment.showProgressBar();
+	}
+
+	@Override
+	public void onRequestFailure(SpiceException e) {
+		fragment.dismissProgressBar();
+		Toast.makeText(fragment.getActivity(), "Fail", Toast.LENGTH_SHORT).show();
+	}
+
+	@Override
+	public void onRequestSuccess(Event result) {
+		fragment.dismissProgressBar();
+		fragment.showEventData(result);
+	}
+}
