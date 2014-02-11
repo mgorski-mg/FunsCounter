@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Funs Counter</string>
+    <string name="refresh_event_list">Refresh Event List</string>
+    <string name="refresh_content">Refresh Content</string>
+    <string name="connection_problem">Can\'t download data! Please check your internet connection.</string>
+    <string name="login">Log In</string>
+    <string name="cant_login">Wrong username or password!</string>
+    <string name="wait">Please wait!</string>
+    <string name="wait">User</string>
+    <string name="wait">Password</string>
+    
+
+</resources>

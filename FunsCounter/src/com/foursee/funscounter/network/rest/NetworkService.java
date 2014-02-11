@@ -10,7 +10,7 @@ import retrofit.converter.GsonConverter;
 
 public class NetworkService extends RetrofitGsonSpiceService {
 
-	private final static String BASE_URL = "http://89.78.24.3:1024"; // "http://192.168.50.100:1024";
+	private final static String BASE_URL = "http://89.78.24.3:1024"; // "http://192.168.50.100:1024"; //
 
 	@Override
 	public void onCreate() {
@@ -33,5 +33,10 @@ public class NetworkService extends RetrofitGsonSpiceService {
 	@Override
 	protected String getServerUrl() {
 		return BASE_URL;
+	}
+
+	@Override
+	public int getThreadCount() {
+		return 3;
 	}
 }

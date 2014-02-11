@@ -8,6 +8,8 @@
     <string name="login">Log In</string>
     <string name="cant_login">Wrong username or password!</string>
     <string name="wait">Please wait!</string>
+    <string name="user">User</string>
+    <string name="password">Password</string>
     
 
 </resources>

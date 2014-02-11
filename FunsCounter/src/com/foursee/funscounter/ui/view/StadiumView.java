@@ -137,22 +137,30 @@ public class StadiumView extends LinearLayout implements OnEventChangeListener {
 
 	private void highlightStand(ArrayList<String> chageGates) {
 		for (String standName : chageGates) {
-			switch (standName) {
-			case "North Stand":
+
+			if (standName.equals("North Stand")) {
 				northStand.setImageResource(R.drawable.north_stand_alert);
-				break;
-			case "East Stand":
+				continue;
+			}
+
+			if (standName.equals("East Stand")) {
 				eastStand.setImageResource(R.drawable.east_stand_alert);
-				break;
-			case "South Stand":
+				continue;
+			}
+
+			if (standName.equals("South Stand")) {
 				southStand.setImageResource(R.drawable.south_stand_alert);
-				break;
-			case "Away Stand":
+				continue;
+			}
+
+			if (standName.equals("Away Stand")) {
 				awayStand.setImageResource(R.drawable.away_alert);
-				break;
-			case "West Stand":
+				continue;
+			}
+
+			if (standName.equals("West Stand")) {
 				westStand.setImageResource(R.drawable.west_stand_alert);
-				break;
+				continue;
 			}
 		}
 	}
