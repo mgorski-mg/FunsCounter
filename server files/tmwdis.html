@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("#button").click(function(){
+    $.post("addToStand.php",
+    {
+      standId:"1"
+    });
+  });
+
+  $("#button2").click(function(){
+    $.post("addToStand.php",
+    {
+      standId:"2"
+    });
+  });
+
+$("#button3").click(function(){
+    $.post("addToStand.php",
+    {
+      standId:"3"
+    });
+  });
+
+$("#button4").click(function(){
+    $.post("addToStand.php",
+    {
+      standId:"4"
+    });
+  });
+
+$("#button5").click(function(){
+    $.post("addToStand.php",
+    {
+      standId:"5"
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<button id="button">Add to North Stand</button>
+<button id="button2">Add to East Stand</button>
+<button id="button3">Add to South Stand</button>
+<button id="button4">Add to Away Stand</button>
+<button id="button5">Add to West Stand</button>
+</body>
+</html>

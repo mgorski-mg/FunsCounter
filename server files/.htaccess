@@ -1,0 +1,4 @@
+AuthName "Members Only"
+AuthUserFile C:\wamp\www\tmwdis\.htpasswd
+AuthType Basic
+require valid-user
